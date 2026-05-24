@@ -1278,12 +1278,12 @@ flows and specifying new TLV types.<a href="#section-abstract-2" class="pilcrow"
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1"><span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span> introduces application of ANCP to PON. However, <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>
-haven't been updated to support PON. Besides, DSL technology is also evolving. 
-G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded versions 
-to provide higher bandwidths for the last mile.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This document considers all existing Access technologies used in a
-Telco network, yet not supported by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and specifies new TLVs
-accordingly.<a href="#section-1-2" class="pilcrow">¶</a></p>
+has not been been updated to support PON. In addition, DSL technology has continued 
+to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded 
+versions to provide higher bandwidths for the last mile.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">This document considers all existing access technologies used in a
+teleco access network, yet not supported by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and specifies 
+new TLVs accordingly.<a href="#section-1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1297,58 +1297,56 @@ described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</s
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">This section repeats some definitions from <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and <span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span>,
 but also updates some definitions where appropriate.<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3">This document makes use of the terms defined in <span>[<a href="#RFC2131" class="cite xref">RFC2131</a>]</span> and <span>[<a href="#RFC8415" class="cite xref">RFC8415</a>]</span>.
-The following additional terms are used:<a href="#section-2-3" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2-4">
-        <dt id="section-2-4.1">Access Node (AN):</dt>
-        <dd style="margin-left: 1.5em" id="section-2-4.2">
+<span class="break"></span><dl class="dlParallel" id="section-2-3">
+        <dt id="section-2-3.1">Access Node (AN):</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.2">
           <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-2-4.2.1.1">
-              <p id="section-2-4.2.1.1.1">Network device <span>[<a href="#RFC5851" class="cite xref">RFC5851</a>]</span>, usually located at a
+<li class="normal ulEmpty" id="section-2-3.2.1.1">
+              <p id="section-2-3.2.1.1.1">Network device <span>[<a href="#RFC5851" class="cite xref">RFC5851</a>]</span>, usually located at a
   service provider central office or street cabinet that terminates access
   (local) loop connections from subscribers. In case the access loop is a
   Digital Subscriber Line (DSL), the Access Node provides DSL signal
   termination and is referred to as a DSL Access Multiplexer (DSLAM). In
   case the access loop is a Passive Optical Network (PON), the Access Node
-  is referred to as an Optical Line Terminal (OLT).<a href="#section-2-4.2.1.1.1" class="pilcrow">¶</a></p>
+  is referred to as an Optical Line Terminal (OLT).<a href="#section-2-3.2.1.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-4.3">Optical Line Terminal (OLT):</dt>
-        <dd style="margin-left: 1.5em" id="section-2-4.4">
+<dt id="section-2-3.3">Optical Line Terminal (OLT):</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.4">
           <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-2-4.4.1.1">
-              <p id="section-2-4.4.1.1.1">The OLT is located in the service provider's
+<li class="normal ulEmpty" id="section-2-3.4.1.1">
+              <p id="section-2-3.4.1.1.1">The OLT is located in the service provider's
   central office (CO) or street cabinet. It terminates and aggregates
   multiple PONs (providing fiber access to multiple premises or
   neighborhoods) on the subscriber side and interfaces with the Network
-  Access Server (NAS) that provides subscriber management.<a href="#section-2-4.4.1.1.1" class="pilcrow">¶</a></p>
+  Access Server (NAS) that provides subscriber management.<a href="#section-2-3.4.1.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-4.5">Optical Network Terminal (ONT):</dt>
-        <dd style="margin-left: 1.5em" id="section-2-4.6">
+<dt id="section-2-3.5">Optical Network Terminal (ONT):</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.6">
           <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-2-4.6.1.1">
-              <p id="section-2-4.6.1.1.1">The ONT terminates PON on the network side
+<li class="normal ulEmpty" id="section-2-3.6.1.1">
+              <p id="section-2-3.6.1.1.1">The ONT terminates PON on the network side
   and provides PON adaptation. The subscriber side interface and the
   location of the ONT are dictated by the type of network deployment. For
   an FTTP deployment (with fiber all the way to the apartment or living
   unit), ONT has Ethernet (Fast Ethernet (FE) / Gigabit Ethernet (GE) /
   Multimedia over Coax Alliance (MoCA)) connectivity with the Home Gateway
   (HGW) / Customer Premises Equipment (CPE). In certain cases, one ONT may
-  provide connections to more than one Home Gateway at the same time.<a href="#section-2-4.6.1.1.1" class="pilcrow">¶</a></p>
+  provide connections to more than one Home Gateway at the same time.<a href="#section-2-3.6.1.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-4.7">Optical Network Unit (ONU):</dt>
-        <dd style="margin-left: 1.5em" id="section-2-4.8">
+<dt id="section-2-3.7">Optical Network Unit (ONU):</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.8">
           <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-2-4.8.1.1">
-              <p id="section-2-4.8.1.1.1">The ONU is a generic term denoting a device that
+<li class="normal ulEmpty" id="section-2-3.8.1.1">
+              <p id="section-2-3.8.1.1.1">The ONU is a generic term denoting a device that
   terminates any one of the distributed (leaf) endpoints of an Optical
   Distribution Network (ODN), implements a PON protocol, and adapts PON
   PDUs to subscriber service interfaces. In the case of a multi-dwelling
@@ -1362,7 +1360,7 @@ The following additional terms are used:<a href="#section-2-3" class="pilcrow">�
   ONU effectively is a "PON-fed DSLAM". In new FTTdp based deployments the
   access node is named DPU (Distribution Point Unit). Basically from ANCP
   perspective this node provides the same functionality. Besides VDSL2, 
-  G.fast is mature and widely deployed.<a href="#section-2-4.8.1.1.1" class="pilcrow">¶</a></p>
+  G.fast is mature and widely deployed.<a href="#section-2-3.8.1.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </dd>
@@ -1377,9 +1375,9 @@ The following additional terms are used:<a href="#section-2-3" class="pilcrow">�
       </h2>
 <p id="section-3-1">ANCP message formats remain the same as described in 
 <span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> when it is applied to PON. 
-However, some message descriptions need to be modified 
-to make them applicable to variant Access Networks, 
-other than DSL specific.<a href="#section-3-1" class="pilcrow">¶</a></p>
+However, some message descriptions need to be modified to 
+make them applicable to access networks other than 
+DSL deployments.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">The ANCP Adjacency message is extended to other Access Technologies
 than DSL. Generalize the message format to following:<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">The following capabilities are defined for ANCP:<a href="#section-3-3" class="pilcrow">¶</a></p>
@@ -2001,8 +1999,8 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-7-1">There are no new security considerations beyond what is described 
-in <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and <span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span>.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">This document does not introduce additional security considerations 
+beyond those discussed in <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and <span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span>.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -2203,10 +2201,6 @@ have defined by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> 
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC2131">[RFC2131]</dt>
-        <dd>
-<span class="refAuthor">Droms, R.</span>, <span class="refTitle">"Dynamic Host Configuration Protocol"</span>, <span class="seriesInfo">RFC 2131</span>, <span class="seriesInfo">DOI 10.17487/RFC2131</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2131">https://www.rfc-editor.org/rfc/rfc2131</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC6320">[RFC6320]</dt>
         <dd>
 <span class="refAuthor">Wadhwa, S.</span>, <span class="refAuthor">Moisand, J.</span>, <span class="refAuthor">Haag, T.</span>, <span class="refAuthor">Voigt, N.</span>, and <span class="refAuthor">T. Taylor, Ed.</span>, <span class="refTitle">"Protocol for Access Node Control Mechanism in Broadband Networks"</span>, <span class="seriesInfo">RFC 6320</span>, <span class="seriesInfo">DOI 10.17487/RFC6320</span>, <time datetime="2011-10" class="refDate">October 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6320">https://www.rfc-editor.org/rfc/rfc6320</a>&gt;</span>. </dd>
@@ -2216,12 +2210,8 @@ have defined by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> 
 <span class="refAuthor">Bitar, N., Ed.</span>, <span class="refAuthor">Wadhwa, S., Ed.</span>, <span class="refAuthor">Haag, T.</span>, and <span class="refAuthor">H. Li</span>, <span class="refTitle">"Applicability of the Access Node Control Mechanism to Broadband Networks Based on Passive Optical Networks (PONs)"</span>, <span class="seriesInfo">RFC 6934</span>, <span class="seriesInfo">DOI 10.17487/RFC6934</span>, <time datetime="2013-06" class="refDate">June 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6934">https://www.rfc-editor.org/rfc/rfc6934</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-        <dd>
-<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC8415">[RFC8415]</dt>
       <dd>
-<span class="refAuthor">Mrugalski, T.</span>, <span class="refAuthor">Siodelski, M.</span>, <span class="refAuthor">Volz, B.</span>, <span class="refAuthor">Yourtchenko, A.</span>, <span class="refAuthor">Richardson, M.</span>, <span class="refAuthor">Jiang, S.</span>, <span class="refAuthor">Lemon, T.</span>, and <span class="refAuthor">T. Winters</span>, <span class="refTitle">"Dynamic Host Configuration Protocol for IPv6 (DHCPv6)"</span>, <span class="seriesInfo">RFC 8415</span>, <span class="seriesInfo">DOI 10.17487/RFC8415</span>, <time datetime="2018-11" class="refDate">November 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8415">https://www.rfc-editor.org/rfc/rfc8415</a>&gt;</span>. </dd>
+<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
