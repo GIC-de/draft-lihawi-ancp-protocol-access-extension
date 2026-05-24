@@ -49,13 +49,13 @@ flows and specifying new TLV types.
 # Introduction
 
 {{!RFC6934}} introduces application of ANCP to PON. However, {{!RFC6320}}
-haven't been updated to support PON. Besides, DSL technology is also evolving. 
-G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded versions 
-to provide higher bandwidths for the last mile.
+has not been been updated to support PON. In addition, DSL technology has continued 
+to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded 
+versions to provide higher bandwidths for the last mile.
 
-This document considers all existing Access technologies used in a
-Telco network, yet not supported by {{!RFC6320}} and specifies new TLVs
-accordingly.
+This document considers all existing access technologies used in a
+teleco access network, yet not supported by {{!RFC6320}} and specifies 
+new TLVs accordingly.
 
 # Conventions and Definitions
 
@@ -63,9 +63,6 @@ accordingly.
 
 This section repeats some definitions from {{!RFC6320}} and {{!RFC6934}},
 but also updates some definitions where appropriate.
-
-This document makes use of the terms defined in {{!RFC2131}} and {{!RFC8415}}.
-The following additional terms are used:
 
 Access Node (AN):
 : > Network device {{?RFC5851}}, usually located at a
@@ -114,9 +111,9 @@ Optical Network Unit (ONU):
 
 ANCP message formats remain the same as described in 
 {{Section 3.5.1  of RFC6320}} when it is applied to PON. 
-However, some message descriptions need to be modified 
-to make them applicable to variant Access Networks, 
-other than DSL specific.
+However, some message descriptions need to be modified to 
+make them applicable to access networks other than 
+DSL deployments.
 
 The ANCP Adjacency message is extended to other Access Technologies
 than DSL. Generalize the message format to following:
@@ -402,8 +399,8 @@ TLVs not addressed here remain unchanged as applied for DSL.
 
 # Security Considerations {#security}
 
-There are no new security considerations beyond what is described 
-in {{!RFC6320}} and {{!RFC6934}}.
+This document does not introduce additional security considerations 
+beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 
 # IANA Considerations
 
