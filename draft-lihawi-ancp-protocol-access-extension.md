@@ -10,7 +10,7 @@ lang: en
 v: 3
 
 venue:
-   github: GIC-de/draft-lihawi-ancp-protocol-access-extension
+  github: "GIC-de/draft-lihawi-ancp-protocol-access-extension"
 
 author:
 -  fullname: "Christian Giese"
@@ -37,9 +37,9 @@ informative:
 
 --- abstract
 
-The purpose of this document is to specify extensions to the ANCP 
-(Access Node Control Protocol) (RFC6320) to support PON as described 
-in RFC6934 and some other DSL Technologies including G.fast. 
+The purpose of this document is to specify extensions to the ANCP
+(Access Node Control Protocol) (RFC6320) to support PON as described
+in RFC6934 and some other DSL Technologies including G.fast.
 
 This document updates RFC6320 by modifications to terminologies,
 flows and specifying new TLV types.
@@ -49,12 +49,12 @@ flows and specifying new TLV types.
 # Introduction
 
 {{!RFC6934}} introduces application of ANCP to PON. However, {{!RFC6320}}
-has not been been updated to support PON. In addition, DSL technology has continued 
-to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded 
+has not been been updated to support PON. In addition, DSL technology has continued
+to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded
 versions to provide higher bandwidths for the last mile.
 
 This document considers all existing access technologies used in a
-teleco access network, yet not supported by {{!RFC6320}} and specifies 
+teleco access network, yet not supported by {{!RFC6320}} and specifies
 new TLVs accordingly.
 
 # Conventions and Definitions
@@ -104,15 +104,15 @@ Optical Network Unit (ONU):
     new copper, with xDSL physical layer (typically VDSL2). In this case, the
     ONU effectively is a "PON-fed DSLAM". In new FTTdp based deployments the
     access node is named DPU (Distribution Point Unit). Basically from ANCP
-    perspective this node provides the same functionality. Besides VDSL2, 
+    perspective this node provides the same functionality. Besides VDSL2,
     G.fast is mature and widely deployed.
 
 # Modification to ANCP - General Aspects
 
-ANCP message formats remain the same as described in 
-{{Section 3.5.1  of RFC6320}} when it is applied to PON. 
-However, some message descriptions need to be modified to 
-make them applicable to access networks other than 
+ANCP message formats remain the same as described in
+{{Section 3.5.1  of RFC6320}} when it is applied to PON.
+However, some message descriptions need to be modified to
+make them applicable to access networks other than
 DSL deployments.
 
 The ANCP Adjacency message is extended to other Access Technologies
@@ -121,24 +121,24 @@ than DSL. Generalize the message format to following:
 The following capabilities are defined for ANCP:
 
 - Capability Type: Access Topology Discovery = 0x01
-  - Access technology: ANY  
-  - Length (in bytes): 0  
-  - Capability Data: NULL  
-  - For the detailed protocol specification of this capability, 
+  - Access technology: ANY
+  - Length (in bytes): 0
+  - Capability Data: NULL
+  - For the detailed protocol specification of this capability,
     see {{Section 6 of RFC6320}}.
 
 - Capability Type: Access Line Configuration = 0x02
-  - Access technology: ANY  
-  - Length (in bytes): 0  
-  - Capability Data: NULL  
-  - For the detailed protocol specification of this capability, 
+  - Access technology: ANY
+  - Length (in bytes): 0
+  - Capability Data: NULL
+  - For the detailed protocol specification of this capability,
     see {{Section 7 of RFC6320}}.
 
 - Capability Type: Access Remote Line Connectivity Testing = 0x04
-  - Access technology: ANY  
-  - Length (in bytes): 0  
-  - Capability Data: NULL  
-  - For the detailed protocol specification of this capability, 
+  - Access technology: ANY
+  - Length (in bytes): 0
+  - Capability Data: NULL
+  - For the detailed protocol specification of this capability,
     see {{Section 8 of RFC6320}}.
 
 # Modification to DSL-Type TLV 0x0091
@@ -156,70 +156,70 @@ Value: 32-bit unsigned integer
 
 # Extension to DSL Sub TLV
 
-DSL sub TLVs are listed in {{Section 6.5 of RFC6320}}. 
+DSL sub TLVs are listed in {{Section 6.5 of RFC6320}}.
 G.Fast requires beside existing TLVs the following new TLVs.
 
 ## Expected Throughput (ETR) TLV
 
-- Type: 0x009B Expected Throughput at L2 (ETR) upstream  
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the expected throughput upstream after 
-    retransmission (ITU-T G.997.2, clause 7.11.1.2).  
+- Type: 0x009B Expected Throughput at L2 (ETR) upstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the expected throughput upstream after
+    retransmission (ITU-T G.997.2, clause 7.11.1.2).
 
-- Type: 0x009C Expected Throughput at L2 (ETR) downstream   
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the expected throughput downstream after 
-    retransmission (ITU-T G.997.2, clause 7.11.1.2).  
+- Type: 0x009C Expected Throughput at L2 (ETR) downstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the expected throughput downstream after
+    retransmission (ITU-T G.997.2, clause 7.11.1.2).
 
 ## Attainable Expected Throughput (ATTETR) TLV
 
-- Type: 0x009D Attainable Expected Throughput (ATTETR) upstream  
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the attainable expected throughput upstream 
-    at L2 (ITU-T G.997.2, clause 7.11.2.2).  
+- Type: 0x009D Attainable Expected Throughput (ATTETR) upstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the attainable expected throughput upstream
+    at L2 (ITU-T G.997.2, clause 7.11.2.2).
 
-- Type: 0x009E Attainable Expected Throughput (ATTETR) downstream  
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the attainable expected throughput downstream 
-    at L2 (ITU-T G.997.2, clause 7.11.2.2).  
+- Type: 0x009E Attainable Expected Throughput (ATTETR) downstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the attainable expected throughput downstream
+    at L2 (ITU-T G.997.2, clause 7.11.2.2).
 
 
 ## Gamma Data Rate (GDR) TLV
 
-- Type: 0x009F Gamma data rate (GDR) upstream  
-  - Length: 4 bytes  
+- Type: 0x009F Gamma data rate (GDR) upstream
+  - Length: 4 bytes
   - Value: Rate in kbits/s as a 32-bit unsigned integer.
-  - Description: Reports the Gamma data rate (GDR) 
-  - upstream (ITU-T G.997.2, clause 7.11.1.3).  
+  - Description: Reports the Gamma data rate (GDR)
+  - upstream (ITU-T G.997.2, clause 7.11.1.3).
 
-- Type: 0x00A0 Gamma Data Rate (GDR) downstream  
-  - Length: 4 bytes  
+- Type: 0x00A0 Gamma Data Rate (GDR) downstream
+  - Length: 4 bytes
   - Value: Rate in kbits/s as a 32-bit unsigned integer.
-  - Description: Reports the Gamma data rate (GDR) 
-  - downstream (ITU-T G.997.2, clause 7.11.1.3).  
+  - Description: Reports the Gamma data rate (GDR)
+  - downstream (ITU-T G.997.2, clause 7.11.1.3).
 
 
 ## Attainable Gamma Data Rate (ATTGDR) TLV
 
-- Type: 0x00A1 Attainable Gamma data rate (ATTGDR) upstream  
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the attainable Gamma data rate 
-    upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).  
+- Type: 0x00A1 Attainable Gamma data rate (ATTGDR) upstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the attainable Gamma data rate
+    upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).
 
-- Type: 0x00A2 Attainable Gamma data rate (ATTGDR) downstream  
-  - Length: 4 bytes  
-  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  - Description: Reports the attainable Gamma data rate (ATTGDR) 
-    downstream (ITU-T G.997.2, clause 7.11.2.3).  
+- Type: 0x00A2 Attainable Gamma data rate (ATTGDR) downstream
+  - Length: 4 bytes
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the attainable Gamma data rate (ATTGDR)
+    downstream (ITU-T G.997.2, clause 7.11.2.3).
 
 # ANCP-Based PON Topology Discovery
 
-This section describes topology discovery messages applied for PON. 
+This section describes topology discovery messages applied for PON.
 TLVs not addressed here remain the same as applied for DSL.
 
 ## ANCP Port Up and Port Down Event Message Descriptions
@@ -263,9 +263,9 @@ NOTE: TLVs MAY be in a different order from what is shown in this figure.
 See {{Section 3.6.1 of RFC6320}} for a description of the ANCP general
 message header. The Message Type field MUST be set to 80 for Port Up,
 81 for Port Down. It is applicable to both DSL and PON based access
-systems. The 4-bit Result field MUST be set to zero (signifying Ignore). 
-The 12-bit Result Code field and the 24-bit Transaction Identifier field 
-MUST also be set to zeroes. Other fields in the general header MUST be 
+systems. The 4-bit Result field MUST be set to zero (signifying Ignore).
+The 12-bit Result Code field and the 24-bit Transaction Identifier field
+MUST also be set to zeroes. Other fields in the general header MUST be
 set a as described in {{Section 3.6 of RFC6320}}.
 
 The five-word Unused field is a historical leftover. The handling
@@ -296,10 +296,10 @@ more TLVs to define its characteristics.
 
 ## PON Access Line Identification
 
-Most ANCP messages involve actions relating to a specific access line. 
-Thus, it is necessary to describe how PON access lines are identified 
-within those messages. This section defines four TLVs for that purpose 
-and provides an informative description of how they are used in PON. 
+Most ANCP messages involve actions relating to a specific access line.
+Thus, it is necessary to describe how PON access lines are identified
+within those messages. This section defines four TLVs for that purpose
+and provides an informative description of how they are used in PON.
 TLVs not addressed here remain unchanged as applied for DSL.
 
 ### Access-Loop-Circuit-ID TLV
@@ -316,7 +316,7 @@ TLVs not addressed here remain unchanged as applied for DSL.
 
 - Type: 0x0002
 - Description: An operator-configured string that uniquely
-  identifies the user on the associated access line, as 
+  identifies the user on the associated access line, as
   described in Section 5.7 of {{TR156}}.
 - Length: Up to 63 bytes
 - Value: ASCII string
@@ -331,7 +331,7 @@ TLVs not addressed here remain unchanged as applied for DSL.
   line attributes. The PON-Access-Line-Attributes TLV MUST contain at
   least one TLV when it is present in a Port Up or Port Down message.
   The actual contents are determined by the AN control
-  application. Technology-independent attributes of {{!RFC6320}}, 
+  application. Technology-independent attributes of {{!RFC6320}},
   such as TLV0x0090, are valid for PON and not repeated here.
 
 ### PON-Access-Type TLV
@@ -399,7 +399,7 @@ TLVs not addressed here remain unchanged as applied for DSL.
 
 # Security Considerations {#security}
 
-This document does not introduce additional security considerations 
+This document does not introduce additional security considerations
 beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 
 # IANA Considerations
@@ -449,6 +449,6 @@ have defined by {{!RFC6320}} and are referenced here for completeness:
 # Acknowledgments
 {:numbered="false"}
 
-Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and 
-Sven Leimer for joint work reviewing the document and providing valuable 
+Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and
+Sven Leimer for joint work reviewing the document and providing valuable
 comments to this document.
