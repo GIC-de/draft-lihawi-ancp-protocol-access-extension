@@ -13,19 +13,18 @@ venue:
    github: GIC-de/draft-lihawi-ancp-protocol-access-extension
 
 author:
--  fullname: "Hongyu Li"
-   organization: "Huawei Technologies Co., Ltd."
-   email: "honyu.li@huawei.com"
--  fullname: "Thomas Haag"
-   organization: "Deutsche Telekom"
-   email: "haagt@telekom.de"
--  fullname: "Birgit Witschurke"
-   organization: "Deutsche Telekom"
-   email: "b.witschurke@telekom.de"
 -  fullname: "Christian Giese"
    organization: "RtBrick"
    email: "christian@rtbrick.com"
-
+-  fullname: "Thomas Haag"
+   organization: "Deutsche Telekom AG"
+   email: "haagt@telekom.de"
+-  fullname: "Birgit Witschurke"
+   organization: "Deutsche Telekom AG"
+   email: "b.witschurke@telekom.de"
+-  fullname: "Hongyu Li"
+   organization: "Huawei"
+   email: "honyu.li@huawei.com"
 
 informative:
    TR156:
@@ -124,32 +123,26 @@ than DSL. Generalize the message format to following:
 
 The following capabilities are defined for ANCP:
 
-* Capability Type: Access Topology Discovery = 0x01
+- Capability Type: Access Topology Discovery = 0x01
+  - Access technology: ANY  
+  - Length (in bytes): 0  
+  - Capability Data: NULL  
+  - For the detailed protocol specification of this capability, 
+    see {{Section 6 of RFC6320}}.
 
-  Access technology: ANY  
-  Length (in bytes): 0  
-  Capability Data: NULL  
+- Capability Type: Access Line Configuration = 0x02
+  - Access technology: ANY  
+  - Length (in bytes): 0  
+  - Capability Data: NULL  
+  - For the detailed protocol specification of this capability, 
+    see {{Section 7 of RFC6320}}.
 
-  For the detailed protocol specification of this capability, 
-  see {{Section 6 of RFC6320}}.
-
-* Capability Type: Access Line Configuration = 0x02
-
-  Access technology: ANY  
-  Length (in bytes): 0  
-  Capability Data: NULL  
-
-  For the detailed protocol specification of this capability, 
-  see {{Section 7 of RFC6320}}.
-
-* Capability Type: Access Remote Line Connectivity Testing = 0x04
-
-  Access technology: ANY  
-  Length (in bytes): 0  
-  Capability Data: NULL  
-
-  For the detailed protocol specification of this capability, 
-  see {{Section 8 of RFC6320}}.
+- Capability Type: Access Remote Line Connectivity Testing = 0x04
+  - Access technology: ANY  
+  - Length (in bytes): 0  
+  - Capability Data: NULL  
+  - For the detailed protocol specification of this capability, 
+    see {{Section 8 of RFC6320}}.
 
 # Modification to DSL-Type TLV 0x0091
 
@@ -157,12 +150,12 @@ Add the following new DSL-Type values.
 
 Value: 32-bit unsigned integer
 
-* G.fast = 8
-* VDSL2 Annex Q = 9
-* SDSL bonded = 10
-* VDSL2 bonded = 11
-* G.fast bonded = 12
-* VDSL2 Annex Q bonded = 13
+- G.fast = 8
+- VDSL2 Annex Q = 9
+- SDSL bonded = 10
+- VDSL2 bonded = 11
+- G.fast bonded = 12
+- VDSL2 Annex Q bonded = 13
 
 # Extension to DSL Sub TLV
 
@@ -171,69 +164,61 @@ G.Fast requires beside existing TLVs the following new TLVs.
 
 ## Expected Throughput (ETR) TLV
 
-* Type: 0x009B Expected Throughput at L2 (ETR) upstream  
+- Type: 0x009B Expected Throughput at L2 (ETR) upstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the expected throughput upstream after 
+    retransmission (ITU-T G.997.2, clause 7.11.1.2).  
 
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the expected throughput upstream after 
-  retransmission (ITU-T G.997.2, clause 7.11.1.2).  
-
-* Type: 0x009C Expected Throughput at L2 (ETR) downstream  
-  
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the expected throughput downstream after 
-  retransmission (ITU-T G.997.2, clause 7.11.1.2).  
+- Type: 0x009C Expected Throughput at L2 (ETR) downstream   
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the expected throughput downstream after 
+    retransmission (ITU-T G.997.2, clause 7.11.1.2).  
 
 ## Attainable Expected Throughput (ATTETR) TLV
 
-* Type: 0x009D Attainable Expected Throughput (ATTETR) upstream  
+- Type: 0x009D Attainable Expected Throughput (ATTETR) upstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the attainable expected throughput upstream 
+    at L2 (ITU-T G.997.2, clause 7.11.2.2).  
 
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the attainable expected throughput upstream 
-  at L2 (ITU-T G.997.2, clause 7.11.2.2).  
-
-* Type: 0x009E Attainable Expected Throughput (ATTETR) downstream  
-
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the attainable expected throughput downstream 
-  at L2 (ITU-T G.997.2, clause 7.11.2.2).  
+- Type: 0x009E Attainable Expected Throughput (ATTETR) downstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the attainable expected throughput downstream 
+    at L2 (ITU-T G.997.2, clause 7.11.2.2).  
 
 
 ## Gamma Data Rate (GDR) TLV
 
-* Type: 0x009F Gamma data rate (GDR) upstream  
+- Type: 0x009F Gamma data rate (GDR) upstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the Gamma data rate (GDR) 
+  - upstream (ITU-T G.997.2, clause 7.11.1.3).  
 
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.
-  Description: Reports the Gamma data rate (GDR) 
-  upstream (ITU-T G.997.2, clause 7.11.1.3).  
-
-* Type: 0x00A0 Gamma Data Rate (GDR) downstream  
-
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.
-  Description: Reports the Gamma data rate (GDR) 
-  downstream (ITU-T G.997.2, clause 7.11.1.3).  
+- Type: 0x00A0 Gamma Data Rate (GDR) downstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.
+  - Description: Reports the Gamma data rate (GDR) 
+  - downstream (ITU-T G.997.2, clause 7.11.1.3).  
 
 
 ## Attainable Gamma Data Rate (ATTGDR) TLV
 
-* Type: 0x00A1 Attainable Gamma data rate (ATTGDR) upstream  
+- Type: 0x00A1 Attainable Gamma data rate (ATTGDR) upstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the attainable Gamma data rate 
+    upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).  
 
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the attainable Gamma data rate 
-  upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).  
-
-* Type: 0x00A2 Attainable Gamma data rate (ATTGDR) downstream  
-
-  Length: 4 bytes  
-  Value: Rate in kbits/s as a 32-bit unsigned integer.  
-  Description: Reports the attainable Gamma data rate (ATTGDR) 
-  downstream (ITU-T G.997.2, clause 7.11.2.3).  
+- Type: 0x00A2 Attainable Gamma data rate (ATTGDR) downstream  
+  - Length: 4 bytes  
+  - Value: Rate in kbits/s as a 32-bit unsigned integer.  
+  - Description: Reports the attainable Gamma data rate (ATTGDR) 
+    downstream (ITU-T G.997.2, clause 7.11.2.3).  
 
 # ANCP-Based PON Topology Discovery
 
@@ -243,7 +228,7 @@ TLVs not addressed here remain the same as applied for DSL.
 ## ANCP Port Up and Port Down Event Message Descriptions
 
 The format of the ANCP Port Up and Port Down Event messages is
-shown in Figure xx1. It has the same format as the one described in
+shown in {{updown}}. It has the same format as the one described in
 section 6.3 of RFC6320. The only difference is that
 DSL-Line-Attributes TLV is updated as Access-Line-Attributes TLV.
 
@@ -322,99 +307,98 @@ TLVs not addressed here remain unchanged as applied for DSL.
 
 ### Access-Loop-Circuit-ID TLV
 
-Type: 0x0001
-Description: A locally administered human-readable string
-generated by or configured on the Access Node, uniquely identifying
-the corresponding access loop logical port on the user side of the
-Access Node, as described in Section 5.7 of {{TR156}}.
-Length: Up to 63 bytes
-Value: ASCII string
+- Type: 0x0001
+- Description: A locally administered human-readable string
+  generated by or configured on the Access Node, uniquely identifying
+  the corresponding access loop logical port on the user side of the
+  Access Node, as described in Section 5.7 of {{TR156}}.
+- Length: Up to 63 bytes
+- Value: ASCII string
 
 ### Access-Loop-Remote-ID TLV
 
-Type: 0x0002
-Description: An operator-configured string that uniquely
-identifies the user on the associated access line, as 
-described in Section 5.7 of {{TR156}}.
-Length: Up to 63 bytes
-Value: ASCII string
+- Type: 0x0002
+- Description: An operator-configured string that uniquely
+  identifies the user on the associated access line, as 
+  described in Section 5.7 of {{TR156}}.
+- Length: Up to 63 bytes
+- Value: ASCII string
 
 ### PON-Access-Line-Attributes TLV
 
-Type: 0x0012
-Description: This TLV encapsulates attribute values of a PON
-access line serving a subscriber.
-Length: Variable (up to 1023 bytes)
-Value: One or more encapsulated TLVs corresponding to PON access
-line attributes. The PON-Access-Line-Attributes TLV MUST contain at
-least one TLV when it is present in a Port Up or Port Down message.
-The actual contents are determined by the AN control
-application. Technology-independent attributes of {{!RFC6320}}, 
-such as TLV0x0090, are valid for PON and not repeated here.
+- Type: 0x0012
+- Description: This TLV encapsulates attribute values of a PON
+  access line serving a subscriber.
+- Length: Variable (up to 1023 bytes)
+- Value: One or more encapsulated TLVs corresponding to PON access
+  line attributes. The PON-Access-Line-Attributes TLV MUST contain at
+  least one TLV when it is present in a Port Up or Port Down message.
+  The actual contents are determined by the AN control
+  application. Technology-independent attributes of {{!RFC6320}}, 
+  such as TLV0x0090, are valid for PON and not repeated here.
 
 ### PON-Access-Type TLV
 
-Type: 0x0097
-Description: Indicates the type of PON transmission system in use.
-Length: 4 bytes
-Value: 32-bit unsigned integer
-
-* OTHER = 0
-* GPON = 1
-* XG-PON1 = 2
-* TWDM-PON = 3
-* XGS-PON = 4
-* WDM-PON = 5
-* Unknown = 7
+- Type: 0x0097
+- Description: Indicates the type of PON transmission system in use.
+- Length: 4 bytes
+- Value: 32-bit unsigned integer
+  - OTHER = 0
+  - GPON = 1
+  - XG-PON1 = 2
+  - TWDM-PON = 3
+  - XGS-PON = 4
+  - WDM-PON = 5
+  - Unknown = 7
 
 ### ONT/ONU-Average-Data-Rate-Downstream TLV">
 
-Type: 0x00b0
-Description: ONT/ONU downstream average data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b0
+- Description: ONT/ONU downstream average data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### ONT/ONU-Peak-Data-Rate-Downstream TLV">
 
-Type: 0x00b1
-Description: ONT/ONU downstream peak data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b1
+- Description: ONT/ONU downstream peak data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### ONT/ONU-Maximum-Data-Rate-Upstream TLV">
 
-Type: 0x00b2
-Description: ONT/ONU upstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b2
+- Description: ONT/ONU upstream maximum data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### ONT/ONU-Assured-Data-Rate-Upstream TLV">
 
-Type: 0x00b3
-Description: ONT/ONU upstream assured data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b3
+- Description: ONT/ONU upstream assured data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### PON-Tree-Maximum-Data-Rate-Upstream TLV">
 
-Type: 0x00b4
-Description: PON Tree upstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b4
+- Description: PON Tree upstream maximum data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### PON-Tree-Maximum-Data-Rate-Downstream TLV">
 
-Type: 0x00b5
-Description: PON Tree downstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer
+- Type: 0x00b5
+- Description: PON Tree downstream maximum data rate L2
+- Length: 4 bytes
+- Value: Rate in kbits/s as a 32-bit unsigned integer
 
 ### Reserved TLV">
 
-Type: 0x00b6 - 0x00b7
-Description: Reserved
-Length: tbd
-Value: tbd
+- Type: 0x00b6 - 0x00b7
+- Description: Reserved
+- Length: tbd
+- Value: tbd
 
 # Security Considerations {#security}
 
