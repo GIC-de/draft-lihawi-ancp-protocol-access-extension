@@ -5,10 +5,10 @@
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
 <title>Access Extensions for ANCP</title>
-<meta content="Hongyu Li" name="author">
+<meta content="Christian Giese" name="author">
 <meta content="Thomas Haag" name="author">
 <meta content="Birgit Witschurke" name="author">
-<meta content="Christian Giese" name="author">
+<meta content="Hongyu Li" name="author">
 <meta content="
        The purpose of this document is to specify extensions to the ANCP 
 (Access Node Control Protocol) (RFC6320) to support PON as described 
@@ -1054,7 +1054,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">May 2026</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Li, et al.</td>
+<td class="left">Giese, et al.</td>
 <td class="center">Expires 23 November 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
@@ -1080,20 +1080,20 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
-      <div class="author-name">H. Li</div>
-<div class="org">Huawei Technologies Co., Ltd.</div>
+      <div class="author-name">C. Giese</div>
+<div class="org">RtBrick</div>
 </div>
 <div class="author">
       <div class="author-name">T. Haag</div>
-<div class="org">Deutsche Telekom</div>
+<div class="org">Deutsche Telekom AG</div>
 </div>
 <div class="author">
       <div class="author-name">B. Witschurke</div>
-<div class="org">Deutsche Telekom</div>
+<div class="org">Deutsche Telekom AG</div>
 </div>
 <div class="author">
-      <div class="author-name">C. Giese</div>
-<div class="org">RtBrick</div>
+      <div class="author-name">H. Li</div>
+<div class="org">Huawei</div>
 </div>
 </dd>
 </dl>
@@ -1386,33 +1386,57 @@ than DSL. Generalize the message format to following:<a href="#section-3-2" clas
 <ul class="normal">
 <li class="normal" id="section-3-4.1">
           <p id="section-3-4.1.1">Capability Type: Access Topology Discovery = 0x01<a href="#section-3-4.1.1" class="pilcrow">¶</a></p>
-<p id="section-3-4.1.2">
-Access technology: ANY<br>
-Length (in bytes): 0<br>
-Capability Data: NULL<a href="#section-3-4.1.2" class="pilcrow">¶</a></p>
-<p id="section-3-4.1.3">
-For the detailed protocol specification of this capability, 
-see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6" class="relref">Section 6</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.1.3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-4.1.2.1">
+              <p id="section-3-4.1.2.1.1">Access technology: ANY<a href="#section-3-4.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.1.2.2">
+              <p id="section-3-4.1.2.2.1">Length (in bytes): 0<a href="#section-3-4.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.1.2.3">
+              <p id="section-3-4.1.2.3.1">Capability Data: NULL<a href="#section-3-4.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.1.2.4">
+              <p id="section-3-4.1.2.4.1">For the detailed protocol specification of this capability, 
+see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6" class="relref">Section 6</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.1.2.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </li>
         <li class="normal" id="section-3-4.2">
           <p id="section-3-4.2.1">Capability Type: Access Line Configuration = 0x02<a href="#section-3-4.2.1" class="pilcrow">¶</a></p>
-<p id="section-3-4.2.2">
-Access technology: ANY<br>
-Length (in bytes): 0<br>
-Capability Data: NULL<a href="#section-3-4.2.2" class="pilcrow">¶</a></p>
-<p id="section-3-4.2.3">
-For the detailed protocol specification of this capability, 
-see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-7" class="relref">Section 7</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.2.3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-4.2.2.1">
+              <p id="section-3-4.2.2.1.1">Access technology: ANY<a href="#section-3-4.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.2.2.2">
+              <p id="section-3-4.2.2.2.1">Length (in bytes): 0<a href="#section-3-4.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.2.2.3">
+              <p id="section-3-4.2.2.3.1">Capability Data: NULL<a href="#section-3-4.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.2.2.4">
+              <p id="section-3-4.2.2.4.1">For the detailed protocol specification of this capability, 
+see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-7" class="relref">Section 7</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.2.2.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </li>
         <li class="normal" id="section-3-4.3">
           <p id="section-3-4.3.1">Capability Type: Access Remote Line Connectivity Testing = 0x04<a href="#section-3-4.3.1" class="pilcrow">¶</a></p>
-<p id="section-3-4.3.2">
-Access technology: ANY<br>
-Length (in bytes): 0<br>
-Capability Data: NULL<a href="#section-3-4.3.2" class="pilcrow">¶</a></p>
-<p id="section-3-4.3.3">
-For the detailed protocol specification of this capability, 
-see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-8" class="relref">Section 8</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.3.3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3-4.3.2.1">
+              <p id="section-3-4.3.2.1.1">Access technology: ANY<a href="#section-3-4.3.2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.3.2.2">
+              <p id="section-3-4.3.2.2.1">Length (in bytes): 0<a href="#section-3-4.3.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.3.2.3">
+              <p id="section-3-4.3.2.3.1">Capability Data: NULL<a href="#section-3-4.3.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-3-4.3.2.4">
+              <p id="section-3-4.3.2.4.1">For the detailed protocol specification of this capability, 
+see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-8" class="relref">Section 8</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.3.2.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </li>
       </ul>
 </section>
@@ -1461,19 +1485,33 @@ G.Fast requires beside existing TLVs the following new TLVs.<a href="#section-5-
 <ul class="normal">
 <li class="normal" id="section-5.1-1.1">
             <p id="section-5.1-1.1.1">Type: 0x009B Expected Throughput at L2 (ETR) upstream<a href="#section-5.1-1.1.1" class="pilcrow">¶</a></p>
-<p id="section-5.1-1.1.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the expected throughput upstream after 
-retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.1.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.1-1.1.2.1">
+                <p id="section-5.1-1.1.2.1.1">Length: 4 bytes<a href="#section-5.1-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.1-1.1.2.2">
+                <p id="section-5.1-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.1-1.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.1-1.1.2.3">
+                <p id="section-5.1-1.1.2.3.1">Description: Reports the expected throughput upstream after 
+retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
           <li class="normal" id="section-5.1-1.2">
             <p id="section-5.1-1.2.1">Type: 0x009C Expected Throughput at L2 (ETR) downstream<a href="#section-5.1-1.2.1" class="pilcrow">¶</a></p>
-<p id="section-5.1-1.2.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the expected throughput downstream after 
-retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.2.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.1-1.2.2.1">
+                <p id="section-5.1-1.2.2.1.1">Length: 4 bytes<a href="#section-5.1-1.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.1-1.2.2.2">
+                <p id="section-5.1-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.1-1.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.1-1.2.2.3">
+                <p id="section-5.1-1.2.2.3.1">Description: Reports the expected throughput downstream after 
+retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
@@ -1486,19 +1524,33 @@ retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.2.2" cla
 <ul class="normal">
 <li class="normal" id="section-5.2-1.1">
             <p id="section-5.2-1.1.1">Type: 0x009D Attainable Expected Throughput (ATTETR) upstream<a href="#section-5.2-1.1.1" class="pilcrow">¶</a></p>
-<p id="section-5.2-1.1.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the attainable expected throughput upstream 
-at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.1.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2-1.1.2.1">
+                <p id="section-5.2-1.1.2.1.1">Length: 4 bytes<a href="#section-5.2-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.2-1.1.2.2">
+                <p id="section-5.2-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.2-1.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.2-1.1.2.3">
+                <p id="section-5.2-1.1.2.3.1">Description: Reports the attainable expected throughput upstream 
+at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
           <li class="normal" id="section-5.2-1.2">
             <p id="section-5.2-1.2.1">Type: 0x009E Attainable Expected Throughput (ATTETR) downstream<a href="#section-5.2-1.2.1" class="pilcrow">¶</a></p>
-<p id="section-5.2-1.2.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the attainable expected throughput downstream 
-at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.2.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.2-1.2.2.1">
+                <p id="section-5.2-1.2.2.1.1">Length: 4 bytes<a href="#section-5.2-1.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.2-1.2.2.2">
+                <p id="section-5.2-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.2-1.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.2-1.2.2.3">
+                <p id="section-5.2-1.2.2.3.1">Description: Reports the attainable expected throughput downstream 
+at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
@@ -1511,19 +1563,37 @@ at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.2.2" class="pilcr
 <ul class="normal">
 <li class="normal" id="section-5.3-1.1">
             <p id="section-5.3-1.1.1">Type: 0x009F Gamma data rate (GDR) upstream<a href="#section-5.3-1.1.1" class="pilcrow">¶</a></p>
-<p id="section-5.3-1.1.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.
-Description: Reports the Gamma data rate (GDR) 
-upstream (ITU-T G.997.2, clause 7.11.1.3).<a href="#section-5.3-1.1.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.3-1.1.2.1">
+                <p id="section-5.3-1.1.2.1.1">Length: 4 bytes<a href="#section-5.3-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.1.2.2">
+                <p id="section-5.3-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.3-1.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.1.2.3">
+                <p id="section-5.3-1.1.2.3.1">Description: Reports the Gamma data rate (GDR)<a href="#section-5.3-1.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.1.2.4">
+                <p id="section-5.3-1.1.2.4.1">upstream (ITU-T G.997.2, clause 7.11.1.3).<a href="#section-5.3-1.1.2.4.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
           <li class="normal" id="section-5.3-1.2">
             <p id="section-5.3-1.2.1">Type: 0x00A0 Gamma Data Rate (GDR) downstream<a href="#section-5.3-1.2.1" class="pilcrow">¶</a></p>
-<p id="section-5.3-1.2.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.
-Description: Reports the Gamma data rate (GDR) 
-downstream (ITU-T G.997.2, clause 7.11.1.3).<a href="#section-5.3-1.2.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.3-1.2.2.1">
+                <p id="section-5.3-1.2.2.1.1">Length: 4 bytes<a href="#section-5.3-1.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.2.2.2">
+                <p id="section-5.3-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.3-1.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.2.2.3">
+                <p id="section-5.3-1.2.2.3.1">Description: Reports the Gamma data rate (GDR)<a href="#section-5.3-1.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.3-1.2.2.4">
+                <p id="section-5.3-1.2.2.4.1">downstream (ITU-T G.997.2, clause 7.11.1.3).<a href="#section-5.3-1.2.2.4.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
@@ -1536,19 +1606,33 @@ downstream (ITU-T G.997.2, clause 7.11.1.3).<a href="#section-5.3-1.2.2" class="
 <ul class="normal">
 <li class="normal" id="section-5.4-1.1">
             <p id="section-5.4-1.1.1">Type: 0x00A1 Attainable Gamma data rate (ATTGDR) upstream<a href="#section-5.4-1.1.1" class="pilcrow">¶</a></p>
-<p id="section-5.4-1.1.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the attainable Gamma data rate 
-upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.1.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.4-1.1.2.1">
+                <p id="section-5.4-1.1.2.1.1">Length: 4 bytes<a href="#section-5.4-1.1.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.4-1.1.2.2">
+                <p id="section-5.4-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.4-1.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.4-1.1.2.3">
+                <p id="section-5.4-1.1.2.3.1">Description: Reports the attainable Gamma data rate 
+upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
           <li class="normal" id="section-5.4-1.2">
             <p id="section-5.4-1.2.1">Type: 0x00A2 Attainable Gamma data rate (ATTGDR) downstream<a href="#section-5.4-1.2.1" class="pilcrow">¶</a></p>
-<p id="section-5.4-1.2.2">
-Length: 4 bytes<br>
-Value: Rate in kbits/s as a 32-bit unsigned integer.<br>
-Description: Reports the attainable Gamma data rate (ATTGDR) 
-downstream (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.2.2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5.4-1.2.2.1">
+                <p id="section-5.4-1.2.2.1.1">Length: 4 bytes<a href="#section-5.4-1.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.4-1.2.2.2">
+                <p id="section-5.4-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.4-1.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-5.4-1.2.2.3">
+                <p id="section-5.4-1.2.2.3.1">Description: Reports the attainable Gamma data rate (ATTGDR) 
+downstream (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
@@ -1568,7 +1652,7 @@ TLVs not addressed here remain the same as applied for DSL.<a href="#section-6-1
 <a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-ancp-port-up-and-port-down-" class="section-name selfRef">ANCP Port Up and Port Down Event Message Descriptions</a>
         </h3>
 <p id="section-6.1-1">The format of the ANCP Port Up and Port Down Event messages is
-shown in Figure xx1. It has the same format as the one described in
+shown in <a href="#updown" class="auto internal xref">Figure 1</a>. It has the same format as the one described in
 section 6.3 of RFC6320. The only difference is that
 DSL-Line-Attributes TLV is updated as Access-Line-Attributes TLV.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
 <span id="name-format-of-the-ancp-port-up-"></span><div id="updown">
@@ -1648,13 +1732,23 @@ TLVs not addressed here remain unchanged as applied for DSL.<a href="#section-6.
           <h4 id="name-access-loop-circuit-id-tlv">
 <a href="#section-6.2.1" class="section-number selfRef">6.2.1. </a><a href="#name-access-loop-circuit-id-tlv" class="section-name selfRef">Access-Loop-Circuit-ID TLV</a>
           </h4>
-<p id="section-6.2.1-1">Type: 0x0001
-Description: A locally administered human-readable string
+<ul class="normal">
+<li class="normal" id="section-6.2.1-1.1">
+              <p id="section-6.2.1-1.1.1">Type: 0x0001<a href="#section-6.2.1-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.1-1.2">
+              <p id="section-6.2.1-1.2.1">Description: A locally administered human-readable string
 generated by or configured on the Access Node, uniquely identifying
 the corresponding access loop logical port on the user side of the
-Access Node, as described in Section 5.7 of <span>[<a href="#TR156" class="cite xref">TR156</a>]</span>.
-Length: Up to 63 bytes
-Value: ASCII string<a href="#section-6.2.1-1" class="pilcrow">¶</a></p>
+Access Node, as described in Section 5.7 of <span>[<a href="#TR156" class="cite xref">TR156</a>]</span>.<a href="#section-6.2.1-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.1-1.3">
+              <p id="section-6.2.1-1.3.1">Length: Up to 63 bytes<a href="#section-6.2.1-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.1-1.4">
+              <p id="section-6.2.1-1.4.1">Value: ASCII string<a href="#section-6.2.1-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="access-loop-remote-id-tlv">
@@ -1662,12 +1756,22 @@ Value: ASCII string<a href="#section-6.2.1-1" class="pilcrow">¶</a></p>
           <h4 id="name-access-loop-remote-id-tlv">
 <a href="#section-6.2.2" class="section-number selfRef">6.2.2. </a><a href="#name-access-loop-remote-id-tlv" class="section-name selfRef">Access-Loop-Remote-ID TLV</a>
           </h4>
-<p id="section-6.2.2-1">Type: 0x0002
-Description: An operator-configured string that uniquely
+<ul class="normal">
+<li class="normal" id="section-6.2.2-1.1">
+              <p id="section-6.2.2-1.1.1">Type: 0x0002<a href="#section-6.2.2-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.2-1.2">
+              <p id="section-6.2.2-1.2.1">Description: An operator-configured string that uniquely
 identifies the user on the associated access line, as 
-described in Section 5.7 of <span>[<a href="#TR156" class="cite xref">TR156</a>]</span>.
-Length: Up to 63 bytes
-Value: ASCII string<a href="#section-6.2.2-1" class="pilcrow">¶</a></p>
+described in Section 5.7 of <span>[<a href="#TR156" class="cite xref">TR156</a>]</span>.<a href="#section-6.2.2-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.2-1.3">
+              <p id="section-6.2.2-1.3.1">Length: Up to 63 bytes<a href="#section-6.2.2-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.2-1.4">
+              <p id="section-6.2.2-1.4.1">Value: ASCII string<a href="#section-6.2.2-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="pon-access-line-attributes-tlv">
@@ -1675,16 +1779,26 @@ Value: ASCII string<a href="#section-6.2.2-1" class="pilcrow">¶</a></p>
           <h4 id="name-pon-access-line-attributes-">
 <a href="#section-6.2.3" class="section-number selfRef">6.2.3. </a><a href="#name-pon-access-line-attributes-" class="section-name selfRef">PON-Access-Line-Attributes TLV</a>
           </h4>
-<p id="section-6.2.3-1">Type: 0x0012
-Description: This TLV encapsulates attribute values of a PON
-access line serving a subscriber.
-Length: Variable (up to 1023 bytes)
-Value: One or more encapsulated TLVs corresponding to PON access
+<ul class="normal">
+<li class="normal" id="section-6.2.3-1.1">
+              <p id="section-6.2.3-1.1.1">Type: 0x0012<a href="#section-6.2.3-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.3-1.2">
+              <p id="section-6.2.3-1.2.1">Description: This TLV encapsulates attribute values of a PON
+access line serving a subscriber.<a href="#section-6.2.3-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.3-1.3">
+              <p id="section-6.2.3-1.3.1">Length: Variable (up to 1023 bytes)<a href="#section-6.2.3-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.3-1.4">
+              <p id="section-6.2.3-1.4.1">Value: One or more encapsulated TLVs corresponding to PON access
 line attributes. The PON-Access-Line-Attributes TLV <span class="bcp14">MUST</span> contain at
 least one TLV when it is present in a Port Up or Port Down message.
 The actual contents are determined by the AN control
 application. Technology-independent attributes of <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>, 
-such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2.3-1" class="pilcrow">¶</a></p>
+such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2.3-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="pon-access-type-tlv">
@@ -1692,31 +1806,41 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
           <h4 id="name-pon-access-type-tlv">
 <a href="#section-6.2.4" class="section-number selfRef">6.2.4. </a><a href="#name-pon-access-type-tlv" class="section-name selfRef">PON-Access-Type TLV</a>
           </h4>
-<p id="section-6.2.4-1">Type: 0x0097
-Description: Indicates the type of PON transmission system in use.
-Length: 4 bytes
-Value: 32-bit unsigned integer<a href="#section-6.2.4-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-6.2.4-2.1">
-              <p id="section-6.2.4-2.1.1">OTHER = 0<a href="#section-6.2.4-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-6.2.4-1.1">
+              <p id="section-6.2.4-1.1.1">Type: 0x0097<a href="#section-6.2.4-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.2">
-              <p id="section-6.2.4-2.2.1">GPON = 1<a href="#section-6.2.4-2.2.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-6.2.4-1.2">
+              <p id="section-6.2.4-1.2.1">Description: Indicates the type of PON transmission system in use.<a href="#section-6.2.4-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.3">
-              <p id="section-6.2.4-2.3.1">XG-PON1 = 2<a href="#section-6.2.4-2.3.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-6.2.4-1.3">
+              <p id="section-6.2.4-1.3.1">Length: 4 bytes<a href="#section-6.2.4-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.4">
-              <p id="section-6.2.4-2.4.1">TWDM-PON = 3<a href="#section-6.2.4-2.4.1" class="pilcrow">¶</a></p>
+            <li class="normal" id="section-6.2.4-1.4">
+              <p id="section-6.2.4-1.4.1">Value: 32-bit unsigned integer<a href="#section-6.2.4-1.4.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.4-1.4.2.1">
+                  <p id="section-6.2.4-1.4.2.1.1">OTHER = 0<a href="#section-6.2.4-1.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.5">
-              <p id="section-6.2.4-2.5.1">XGS-PON = 4<a href="#section-6.2.4-2.5.1" class="pilcrow">¶</a></p>
+                <li class="normal" id="section-6.2.4-1.4.2.2">
+                  <p id="section-6.2.4-1.4.2.2.1">GPON = 1<a href="#section-6.2.4-1.4.2.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.6">
-              <p id="section-6.2.4-2.6.1">WDM-PON = 5<a href="#section-6.2.4-2.6.1" class="pilcrow">¶</a></p>
+                <li class="normal" id="section-6.2.4-1.4.2.3">
+                  <p id="section-6.2.4-1.4.2.3.1">XG-PON1 = 2<a href="#section-6.2.4-1.4.2.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-6.2.4-2.7">
-              <p id="section-6.2.4-2.7.1">Unknown = 7<a href="#section-6.2.4-2.7.1" class="pilcrow">¶</a></p>
+                <li class="normal" id="section-6.2.4-1.4.2.4">
+                  <p id="section-6.2.4-1.4.2.4.1">TWDM-PON = 3<a href="#section-6.2.4-1.4.2.4.1" class="pilcrow">¶</a></p>
+</li>
+                <li class="normal" id="section-6.2.4-1.4.2.5">
+                  <p id="section-6.2.4-1.4.2.5.1">XGS-PON = 4<a href="#section-6.2.4-1.4.2.5.1" class="pilcrow">¶</a></p>
+</li>
+                <li class="normal" id="section-6.2.4-1.4.2.6">
+                  <p id="section-6.2.4-1.4.2.6.1">WDM-PON = 5<a href="#section-6.2.4-1.4.2.6.1" class="pilcrow">¶</a></p>
+</li>
+                <li class="normal" id="section-6.2.4-1.4.2.7">
+                  <p id="section-6.2.4-1.4.2.7.1">Unknown = 7<a href="#section-6.2.4-1.4.2.7.1" class="pilcrow">¶</a></p>
+</li>
+              </ul>
 </li>
           </ul>
 </section>
@@ -1726,10 +1850,20 @@ Value: 32-bit unsigned integer<a href="#section-6.2.4-1" class="pilcrow">¶</a><
           <h4 id="name-ont-onu-average-data-rate-d">
 <a href="#section-6.2.5" class="section-number selfRef">6.2.5. </a><a href="#name-ont-onu-average-data-rate-d" class="section-name selfRef">ONT/ONU-Average-Data-Rate-Downstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.5-1">Type: 0x00b0
-Description: ONT/ONU downstream average data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.5-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.5-1.1">
+              <p id="section-6.2.5-1.1.1">Type: 0x00b0<a href="#section-6.2.5-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.5-1.2">
+              <p id="section-6.2.5-1.2.1">Description: ONT/ONU downstream average data rate L2<a href="#section-6.2.5-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.5-1.3">
+              <p id="section-6.2.5-1.3.1">Length: 4 bytes<a href="#section-6.2.5-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.5-1.4">
+              <p id="section-6.2.5-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.5-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="ontonu-peak-data-rate-downstream-tlv">
@@ -1737,10 +1871,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.5-1" cl
           <h4 id="name-ont-onu-peak-data-rate-down">
 <a href="#section-6.2.6" class="section-number selfRef">6.2.6. </a><a href="#name-ont-onu-peak-data-rate-down" class="section-name selfRef">ONT/ONU-Peak-Data-Rate-Downstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.6-1">Type: 0x00b1
-Description: ONT/ONU downstream peak data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.6-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.6-1.1">
+              <p id="section-6.2.6-1.1.1">Type: 0x00b1<a href="#section-6.2.6-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.6-1.2">
+              <p id="section-6.2.6-1.2.1">Description: ONT/ONU downstream peak data rate L2<a href="#section-6.2.6-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.6-1.3">
+              <p id="section-6.2.6-1.3.1">Length: 4 bytes<a href="#section-6.2.6-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.6-1.4">
+              <p id="section-6.2.6-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.6-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="ontonu-maximum-data-rate-upstream-tlv">
@@ -1748,10 +1892,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.6-1" cl
           <h4 id="name-ont-onu-maximum-data-rate-u">
 <a href="#section-6.2.7" class="section-number selfRef">6.2.7. </a><a href="#name-ont-onu-maximum-data-rate-u" class="section-name selfRef">ONT/ONU-Maximum-Data-Rate-Upstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.7-1">Type: 0x00b2
-Description: ONT/ONU upstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.7-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.7-1.1">
+              <p id="section-6.2.7-1.1.1">Type: 0x00b2<a href="#section-6.2.7-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.7-1.2">
+              <p id="section-6.2.7-1.2.1">Description: ONT/ONU upstream maximum data rate L2<a href="#section-6.2.7-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.7-1.3">
+              <p id="section-6.2.7-1.3.1">Length: 4 bytes<a href="#section-6.2.7-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.7-1.4">
+              <p id="section-6.2.7-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.7-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="ontonu-assured-data-rate-upstream-tlv">
@@ -1759,10 +1913,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.7-1" cl
           <h4 id="name-ont-onu-assured-data-rate-u">
 <a href="#section-6.2.8" class="section-number selfRef">6.2.8. </a><a href="#name-ont-onu-assured-data-rate-u" class="section-name selfRef">ONT/ONU-Assured-Data-Rate-Upstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.8-1">Type: 0x00b3
-Description: ONT/ONU upstream assured data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.8-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.8-1.1">
+              <p id="section-6.2.8-1.1.1">Type: 0x00b3<a href="#section-6.2.8-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.8-1.2">
+              <p id="section-6.2.8-1.2.1">Description: ONT/ONU upstream assured data rate L2<a href="#section-6.2.8-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.8-1.3">
+              <p id="section-6.2.8-1.3.1">Length: 4 bytes<a href="#section-6.2.8-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.8-1.4">
+              <p id="section-6.2.8-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.8-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="pon-tree-maximum-data-rate-upstream-tlv">
@@ -1770,10 +1934,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.8-1" cl
           <h4 id="name-pon-tree-maximum-data-rate-">
 <a href="#section-6.2.9" class="section-number selfRef">6.2.9. </a><a href="#name-pon-tree-maximum-data-rate-" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Upstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.9-1">Type: 0x00b4
-Description: PON Tree upstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.9-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.9-1.1">
+              <p id="section-6.2.9-1.1.1">Type: 0x00b4<a href="#section-6.2.9-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.9-1.2">
+              <p id="section-6.2.9-1.2.1">Description: PON Tree upstream maximum data rate L2<a href="#section-6.2.9-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.9-1.3">
+              <p id="section-6.2.9-1.3.1">Length: 4 bytes<a href="#section-6.2.9-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.9-1.4">
+              <p id="section-6.2.9-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.9-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="pon-tree-maximum-data-rate-downstream-tlv">
@@ -1781,10 +1955,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.9-1" cl
           <h4 id="name-pon-tree-maximum-data-rate-d">
 <a href="#section-6.2.10" class="section-number selfRef">6.2.10. </a><a href="#name-pon-tree-maximum-data-rate-d" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Downstream TLV"&gt;</a>
           </h4>
-<p id="section-6.2.10-1">Type: 0x00b5
-Description: PON Tree downstream maximum data rate L2
-Length: 4 bytes
-Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.10-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.10-1.1">
+              <p id="section-6.2.10-1.1.1">Type: 0x00b5<a href="#section-6.2.10-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.10-1.2">
+              <p id="section-6.2.10-1.2.1">Description: PON Tree downstream maximum data rate L2<a href="#section-6.2.10-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.10-1.3">
+              <p id="section-6.2.10-1.3.1">Length: 4 bytes<a href="#section-6.2.10-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.10-1.4">
+              <p id="section-6.2.10-1.4.1">Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.10-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 <div id="reserved-tlv">
@@ -1792,10 +1976,20 @@ Value: Rate in kbits/s as a 32-bit unsigned integer<a href="#section-6.2.10-1" c
           <h4 id="name-reserved-tlv">
 <a href="#section-6.2.11" class="section-number selfRef">6.2.11. </a><a href="#name-reserved-tlv" class="section-name selfRef">Reserved TLV"&gt;</a>
           </h4>
-<p id="section-6.2.11-1">Type: 0x00b6 - 0x00b7
-Description: Reserved
-Length: tbd
-Value: tbd<a href="#section-6.2.11-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.2.11-1.1">
+              <p id="section-6.2.11-1.1.1">Type: 0x00b6 - 0x00b7<a href="#section-6.2.11-1.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.11-1.2">
+              <p id="section-6.2.11-1.2.1">Description: Reserved<a href="#section-6.2.11-1.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.11-1.3">
+              <p id="section-6.2.11-1.3.1">Length: tbd<a href="#section-6.2.11-1.3.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-6.2.11-1.4">
+              <p id="section-6.2.11-1.4.1">Value: tbd<a href="#section-6.2.11-1.4.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
 </section>
 </div>
 </section>
@@ -2067,16 +2261,16 @@ comments to this document.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">Hongyu Li</span></div>
-<div dir="auto" class="left"><span class="org">Huawei Technologies Co., Ltd.</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Christian Giese</span></div>
+<div dir="auto" class="left"><span class="org">RtBrick</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:honyu.li@huawei.com" class="email">honyu.li@huawei.com</a>
+<a href="mailto:christian@rtbrick.com" class="email">christian@rtbrick.com</a>
 </div>
 </address>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Thomas Haag</span></div>
-<div dir="auto" class="left"><span class="org">Deutsche Telekom</span></div>
+<div dir="auto" class="left"><span class="org">Deutsche Telekom AG</span></div>
 <div class="email">
 <span>Email:</span>
 <a href="mailto:haagt@telekom.de" class="email">haagt@telekom.de</a>
@@ -2084,18 +2278,18 @@ comments to this document.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </address>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Birgit Witschurke</span></div>
-<div dir="auto" class="left"><span class="org">Deutsche Telekom</span></div>
+<div dir="auto" class="left"><span class="org">Deutsche Telekom AG</span></div>
 <div class="email">
 <span>Email:</span>
 <a href="mailto:b.witschurke@telekom.de" class="email">b.witschurke@telekom.de</a>
 </div>
 </address>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">Christian Giese</span></div>
-<div dir="auto" class="left"><span class="org">RtBrick</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Hongyu Li</span></div>
+<div dir="auto" class="left"><span class="org">Huawei</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:christian@rtbrick.com" class="email">christian@rtbrick.com</a>
+<a href="mailto:honyu.li@huawei.com" class="email">honyu.li@huawei.com</a>
 </div>
 </address>
 </section>
