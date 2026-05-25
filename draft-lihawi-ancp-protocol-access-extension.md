@@ -34,11 +34,11 @@ informative:
 
 --- abstract
 
-This document specifies extensions to the Access Node Control Protocol (ANCP), 
-defined in RFC6320, to introduce support for Passive Optical Networks (PON) 
-as described in RFC6934, alongside evolving DSL technologies such as G.fast. 
-Furthermore, this document updates RFC6320 by modifying existing terminologies 
-and message flows, and by defining new Type-Length-Value (TLV) types to accommodate 
+This document specifies extensions to the Access Node Control Protocol (ANCP),
+defined in RFC6320, to introduce support for Passive Optical Networks (PON)
+as described in RFC6934, alongside evolving DSL technologies such as G.fast.
+Furthermore, this document updates RFC6320 by modifying existing terminologies
+and message flows, and by defining new Type-Length-Value (TLV) types to accommodate
 these varied access technologies.
 
 --- middle
@@ -405,17 +405,17 @@ beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 
 ## Early IANA Allocation Request
 
-**Note to the RFC Editor and IANA:** 
-Multiple vendors have already implemented the ANCP extensions described in this document, 
-and the exact TLV Type values specified below are actively deployed in production networks. 
-To prevent severe breakage of backwards compatibility within this existing deployed base, 
-the authors formally request the early allocation of these specific TLV Type values 
+**Note to the RFC Editor and IANA:**
+Multiple vendors have already implemented the ANCP extensions described in this document,
+and the exact TLV Type values specified below are actively deployed in production networks.
+To prevent severe breakage of backwards compatibility within this existing deployed base,
+the authors formally request the early allocation of these specific TLV Type values
 according to the procedures defined in {{!RFC7120}}.
 
 ## ANCP TLV Type Registry
 
-This document defines the following sets of new TLVs for PON and evolving DSL access technologies. 
-Some values previously defined by {{!RFC6320}} are referenced here for completeness. 
+This document defines the following sets of new TLVs for PON and evolving DSL access technologies.
+Some values previously defined by {{!RFC6320}} are referenced here for completeness.
 
 IANA is requested to allocate the specific code points listed below in the "ANCP TLV Type" registry.
 
@@ -457,12 +457,12 @@ IANA is requested to allocate the specific code points listed below in the "ANCP
 
 ## Creation of the ANCP DSL-Type Registry
 
-This document requests that IANA create a new registry titled "ANCP DSL-Type" within the 
-Access Node Control Protocol (ANCP). 
+This document requests that IANA create a new registry titled "ANCP DSL-Type" within the
+Access Node Control Protocol (ANCP).
 
-The registration procedure for this registry is "IETF Review" as defined in RFC 8126. 
+The registration procedure for this registry is "IETF Review" as defined in RFC 8126.
 
-The registry consists of 32-bit unsigned integers. IANA is requested to populate this new registry with the initial values defined in RFC 6320, as well as the new values defined in this document (which are subject to the early allocation request noted above). 
+The registry consists of 32-bit unsigned integers. IANA is requested to populate this new registry with the initial values defined in RFC 6320, as well as the new values defined in this document (which are subject to the early allocation request noted above).
 
 | Value | Description            | Reference     |
 | ----- | ---------------------- | ------------- |
@@ -482,10 +482,10 @@ The registry consists of 32-bit unsigned integers. IANA is requested to populate
 
 ## Creation of the ANCP PON-Access-Type Registry
 
-This document requests that IANA create a new registry titled "ANCP PON-Access-Type" 
-within the Access Node Control Protocol (ANCP) parameters. 
+This document requests that IANA create a new registry titled "ANCP PON-Access-Type"
+within the Access Node Control Protocol (ANCP) parameters.
 
-The registration procedure for this registry is "IETF Review" as defined in RFC 8126. 
+The registration procedure for this registry is "IETF Review" as defined in RFC 8126.
 
 The registry consists of 32-bit unsigned integers representing the type of PON transmission system in use. IANA is requested to populate this new registry with the initial values defined in this document (which are subject to the early allocation request noted above).
 
@@ -507,8 +507,8 @@ The registry consists of 32-bit unsigned integers representing the type of PON t
 {:numbered="false"}
 
 The authors would like to give special recognition to Hongyu Li, who served as a primary
-author on earlier versions of this draft. His foundational efforts and significant technical 
-contributions during his time at Huawei Technologies were instrumental in shaping this 
+author on earlier versions of this draft. His foundational efforts and significant technical
+contributions during his time at Huawei Technologies were instrumental in shaping this
 document.
 
 Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and
