@@ -23,8 +23,8 @@ author:
    organization: "Deutsche Telekom AG"
    email: "b.witschurke@telekom.de"
 -  fullname: "Hongyu Li"
-   organization: "Huawei"
-   email: "honyu.li@huawei.com"
+   organization: "Huawei Technologies"
+   email: "lihy@huawei.com"
 
 informative:
    TR156:
@@ -39,7 +39,7 @@ informative:
 
 The purpose of this document is to specify extensions to the ANCP
 (Access Node Control Protocol) (RFC6320) to support PON as described
-in RFC6934 and some other DSL Technologies including G.fast.
+in RFC6934 and newer DSL Technologies including G.fast.
 
 This document updates RFC6320 by modifications to terminologies,
 flows and specifying new TLV types.
@@ -49,12 +49,12 @@ flows and specifying new TLV types.
 # Introduction
 
 {{!RFC6934}} introduces application of ANCP to PON. However, {{!RFC6320}}
-has not been been updated to support PON. In addition, DSL technology has continued
+has not been updated to support PON. In addition, DSL technology has continued
 to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded
 versions to provide higher bandwidths for the last mile.
 
 This document considers all existing access technologies used in a
-teleco access network, yet not supported by {{!RFC6320}} and specifies
+telco access network, yet not supported by {{!RFC6320}} and specifies
 new TLVs accordingly.
 
 # Conventions and Definitions
@@ -157,7 +157,7 @@ Value: 32-bit unsigned integer
 # Extension to DSL Sub TLV
 
 DSL sub TLVs are listed in {{Section 6.5 of RFC6320}}.
-G.Fast requires beside existing TLVs the following new TLVs.
+G.fast requires beside existing TLVs the following new TLVs.
 
 ## Expected Throughput (ETR) TLV
 
@@ -266,7 +266,7 @@ message header. The Message Type field MUST be set to 80 for Port Up,
 systems. The 4-bit Result field MUST be set to zero (signifying Ignore).
 The 12-bit Result Code field and the 24-bit Transaction Identifier field
 MUST also be set to zeroes. Other fields in the general header MUST be
-set a as described in {{Section 3.6 of RFC6320}}.
+set as described in {{Section 3.6 of RFC6320}}.
 
 The five-word Unused field is a historical leftover. The handling
 of unused/reserved fields is described in {{Section 3.4 of RFC6320}}.
@@ -348,51 +348,51 @@ TLVs not addressed here remain unchanged as applied for DSL.
   - WDM-PON = 5
   - Unknown = 7
 
-### ONT/ONU-Average-Data-Rate-Downstream TLV">
+### ONT/ONU-Average-Data-Rate-Downstream TLV
 
-- Type: 0x00b0
+- Type: 0x00B0
 - Description: ONT/ONU downstream average data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### ONT/ONU-Peak-Data-Rate-Downstream TLV">
+### ONT/ONU-Peak-Data-Rate-Downstream TLV
 
-- Type: 0x00b1
+- Type: 0x00B1
 - Description: ONT/ONU downstream peak data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### ONT/ONU-Maximum-Data-Rate-Upstream TLV">
+### ONT/ONU-Maximum-Data-Rate-Upstream TLV
 
-- Type: 0x00b2
+- Type: 0x00B2
 - Description: ONT/ONU upstream maximum data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### ONT/ONU-Assured-Data-Rate-Upstream TLV">
+### ONT/ONU-Assured-Data-Rate-Upstream TLV
 
-- Type: 0x00b3
+- Type: 0x00B3
 - Description: ONT/ONU upstream assured data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### PON-Tree-Maximum-Data-Rate-Upstream TLV">
+### PON-Tree-Maximum-Data-Rate-Upstream TLV
 
-- Type: 0x00b4
+- Type: 0x00B4
 - Description: PON Tree upstream maximum data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### PON-Tree-Maximum-Data-Rate-Downstream TLV">
+### PON-Tree-Maximum-Data-Rate-Downstream TLV
 
-- Type: 0x00b5
+- Type: 0x00B5
 - Description: PON Tree downstream maximum data rate L2
 - Length: 4 bytes
 - Value: Rate in kbits/s as a 32-bit unsigned integer
 
-### Reserved TLV">
+### Reserved TLV
 
-- Type: 0x00b6 - 0x00b7
+- Type: 0x00B6 - 0x00B7
 - Description: Reserved
 - Length: tbd
 - Value: tbd
@@ -407,7 +407,7 @@ beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 ## ANCP TLV Type Registry
 
 This document defines following sets of TLVs for PON, some of them
-have defined by {{!RFC6320}} and are referenced here for completeness:
+have been defined by {{!RFC6320}} and are referenced here for completeness:
 
 | Type Code | TLV Name                                               | Reference |
 | --------- | ------------------------------------------------------ | --------- |
