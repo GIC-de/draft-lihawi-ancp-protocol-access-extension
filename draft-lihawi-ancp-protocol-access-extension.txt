@@ -8,7 +8,7 @@ Updates: 6320 (if approved)                                      T. Haag
 Intended status: Experimental                              B. Witschurke
 Expires: 23 November 2026                            Deutsche Telekom AG
                                                                    H. Li
-                                                                  Huawei
+                                                     Huawei Technologies
                                                              22 May 2026
 
 
@@ -19,7 +19,7 @@ Abstract
 
    The purpose of this document is to specify extensions to the ANCP
    (Access Node Control Protocol) (RFC6320) to support PON as described
-   in RFC6934 and some other DSL Technologies including G.fast.
+   in RFC6934 and newer DSL Technologies including G.fast.
 
    This document updates RFC6320 by modifications to terminologies,
    flows and specifying new TLV types.
@@ -85,13 +85,13 @@ Table of Contents
        6.2.2.  Access-Loop-Remote-ID TLV
        6.2.3.  PON-Access-Line-Attributes TLV
        6.2.4.  PON-Access-Type TLV
-       6.2.5.  ONT/ONU-Average-Data-Rate-Downstream TLV">
-       6.2.6.  ONT/ONU-Peak-Data-Rate-Downstream TLV">
-       6.2.7.  ONT/ONU-Maximum-Data-Rate-Upstream TLV">
-       6.2.8.  ONT/ONU-Assured-Data-Rate-Upstream TLV">
-       6.2.9.  PON-Tree-Maximum-Data-Rate-Upstream TLV">
-       6.2.10. PON-Tree-Maximum-Data-Rate-Downstream TLV">
-       6.2.11. Reserved TLV">
+       6.2.5.  ONT/ONU-Average-Data-Rate-Downstream TLV
+       6.2.6.  ONT/ONU-Peak-Data-Rate-Downstream TLV
+       6.2.7.  ONT/ONU-Maximum-Data-Rate-Upstream TLV
+       6.2.8.  ONT/ONU-Assured-Data-Rate-Upstream TLV
+       6.2.9.  PON-Tree-Maximum-Data-Rate-Upstream TLV
+       6.2.10. PON-Tree-Maximum-Data-Rate-Downstream TLV
+       6.2.11. Reserved TLV
    7.  Security Considerations
    8.  IANA Considerations
      8.1.  ANCP TLV Type Registry
@@ -104,13 +104,13 @@ Table of Contents
 1.  Introduction
 
    [RFC6934] introduces application of ANCP to PON.  However, [RFC6320]
-   has not been been updated to support PON.  In addition, DSL
-   technology has continued to evolve.  G.fast, VDSL2 Vectoring and
-   VDSL2 Annex Q were introduced as upgraded versions to provide higher
-   bandwidths for the last mile.
+   has not been updated to support PON.  In addition, DSL technology has
+   continued to evolve.  G.fast, VDSL2 Vectoring and VDSL2 Annex Q were
+   introduced as upgraded versions to provide higher bandwidths for the
+   last mile.
 
    This document considers all existing access technologies used in a
-   teleco access network, yet not supported by [RFC6320] and specifies
+   telco access network, yet not supported by [RFC6320] and specifies
    new TLVs accordingly.
 
 2.  Conventions and Definitions
@@ -237,7 +237,7 @@ Table of Contents
 
 5.  Extension to DSL Sub TLV
 
-   DSL sub TLVs are listed in Section 6.5 of [RFC6320].  G.Fast requires
+   DSL sub TLVs are listed in Section 6.5 of [RFC6320].  G.fast requires
    beside existing TLVs the following new TLVs.
 
 5.1.  Expected Throughput (ETR) TLV
@@ -372,8 +372,8 @@ Table of Contents
    access systems.  The 4-bit Result field MUST be set to zero
    (signifying Ignore).  The 12-bit Result Code field and the 24-bit
    Transaction Identifier field MUST also be set to zeroes.  Other
-   fields in the general header MUST be set a as described in
-   Section 3.6 of [RFC6320].
+   fields in the general header MUST be set as described in Section 3.6
+   of [RFC6320].
 
    The five-word Unused field is a historical leftover.  The handling of
    unused/reserved fields is described in Section 3.4 of [RFC6320].
@@ -475,9 +475,9 @@ Table of Contents
 
       -  Unknown = 7
 
-6.2.5.  ONT/ONU-Average-Data-Rate-Downstream TLV">
+6.2.5.  ONT/ONU-Average-Data-Rate-Downstream TLV
 
-   *  Type: 0x00b0
+   *  Type: 0x00B0
 
    *  Description: ONT/ONU downstream average data rate L2
 
@@ -485,9 +485,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.6.  ONT/ONU-Peak-Data-Rate-Downstream TLV">
+6.2.6.  ONT/ONU-Peak-Data-Rate-Downstream TLV
 
-   *  Type: 0x00b1
+   *  Type: 0x00B1
 
    *  Description: ONT/ONU downstream peak data rate L2
 
@@ -495,9 +495,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.7.  ONT/ONU-Maximum-Data-Rate-Upstream TLV">
+6.2.7.  ONT/ONU-Maximum-Data-Rate-Upstream TLV
 
-   *  Type: 0x00b2
+   *  Type: 0x00B2
 
    *  Description: ONT/ONU upstream maximum data rate L2
 
@@ -505,9 +505,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.8.  ONT/ONU-Assured-Data-Rate-Upstream TLV">
+6.2.8.  ONT/ONU-Assured-Data-Rate-Upstream TLV
 
-   *  Type: 0x00b3
+   *  Type: 0x00B3
 
    *  Description: ONT/ONU upstream assured data rate L2
 
@@ -515,9 +515,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.9.  PON-Tree-Maximum-Data-Rate-Upstream TLV">
+6.2.9.  PON-Tree-Maximum-Data-Rate-Upstream TLV
 
-   *  Type: 0x00b4
+   *  Type: 0x00B4
 
    *  Description: PON Tree upstream maximum data rate L2
 
@@ -525,9 +525,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.10.  PON-Tree-Maximum-Data-Rate-Downstream TLV">
+6.2.10.  PON-Tree-Maximum-Data-Rate-Downstream TLV
 
-   *  Type: 0x00b5
+   *  Type: 0x00B5
 
    *  Description: PON Tree downstream maximum data rate L2
 
@@ -535,9 +535,9 @@ Table of Contents
 
    *  Value: Rate in kbits/s as a 32-bit unsigned integer
 
-6.2.11.  Reserved TLV">
+6.2.11.  Reserved TLV
 
-   *  Type: 0x00b6 - 0x00b7
+   *  Type: 0x00B6 - 0x00B7
 
    *  Description: Reserved
 
@@ -555,7 +555,8 @@ Table of Contents
 8.1.  ANCP TLV Type Registry
 
    This document defines following sets of TLVs for PON, some of them
-   have defined by [RFC6320] and are referenced here for completeness:
+   have been defined by [RFC6320] and are referenced here for
+   completeness:
 
      +===========+=======================================+===========+
      | Type Code | TLV Name                              | Reference |
@@ -688,5 +689,5 @@ Authors' Addresses
 
 
    Hongyu Li
-   Huawei
-   Email: honyu.li@huawei.com
+   Huawei Technologies
+   Email: lihy@huawei.com

@@ -10,9 +10,9 @@
 <meta content="Birgit Witschurke" name="author">
 <meta content="Hongyu Li" name="author">
 <meta content="
-       The purpose of this document is to specify extensions to the ANCP 
-(Access Node Control Protocol) (RFC6320) to support PON as described 
-in RFC6934 and some other DSL Technologies including G.fast. 
+       The purpose of this document is to specify extensions to the ANCP
+(Access Node Control Protocol) (RFC6320) to support PON as described
+in RFC6934 and newer DSL Technologies including G.fast. 
        This document updates RFC6320 by modifications to terminologies,
 flows and specifying new TLV types. 
     " name="description">
@@ -1093,7 +1093,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </div>
 <div class="author">
       <div class="author-name">H. Li</div>
-<div class="org">Huawei</div>
+<div class="org">Huawei Technologies</div>
 </div>
 </dd>
 </dl>
@@ -1101,9 +1101,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Access Extensions for ANCP</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The purpose of this document is to specify extensions to the ANCP 
-(Access Node Control Protocol) (RFC6320) to support PON as described 
-in RFC6934 and some other DSL Technologies including G.fast.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The purpose of this document is to specify extensions to the ANCP
+(Access Node Control Protocol) (RFC6320) to support PON as described
+in RFC6934 and newer DSL Technologies including G.fast.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">This document updates RFC6320 by modifications to terminologies,
 flows and specifying new TLV types.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
@@ -1216,25 +1216,25 @@ flows and specifying new TLV types.<a href="#section-abstract-2" class="pilcrow"
                     <p id="section-toc.1-1.6.2.2.2.4.1"><a href="#section-6.2.4" class="auto internal xref">6.2.4</a>.  <a href="#name-pon-access-type-tlv" class="internal xref">PON-Access-Type TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.5">
-                    <p id="section-toc.1-1.6.2.2.2.5.1"><a href="#section-6.2.5" class="auto internal xref">6.2.5</a>.  <a href="#name-ont-onu-average-data-rate-d" class="internal xref">ONT/ONU-Average-Data-Rate-Downstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.5.1"><a href="#section-6.2.5" class="auto internal xref">6.2.5</a>.  <a href="#name-ont-onu-average-data-rate-d" class="internal xref">ONT/ONU-Average-Data-Rate-Downstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.6">
-                    <p id="section-toc.1-1.6.2.2.2.6.1"><a href="#section-6.2.6" class="auto internal xref">6.2.6</a>.  <a href="#name-ont-onu-peak-data-rate-down" class="internal xref">ONT/ONU-Peak-Data-Rate-Downstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.6.1"><a href="#section-6.2.6" class="auto internal xref">6.2.6</a>.  <a href="#name-ont-onu-peak-data-rate-down" class="internal xref">ONT/ONU-Peak-Data-Rate-Downstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.7">
-                    <p id="section-toc.1-1.6.2.2.2.7.1"><a href="#section-6.2.7" class="auto internal xref">6.2.7</a>.  <a href="#name-ont-onu-maximum-data-rate-u" class="internal xref">ONT/ONU-Maximum-Data-Rate-Upstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.7.1"><a href="#section-6.2.7" class="auto internal xref">6.2.7</a>.  <a href="#name-ont-onu-maximum-data-rate-u" class="internal xref">ONT/ONU-Maximum-Data-Rate-Upstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.8">
-                    <p id="section-toc.1-1.6.2.2.2.8.1"><a href="#section-6.2.8" class="auto internal xref">6.2.8</a>.  <a href="#name-ont-onu-assured-data-rate-u" class="internal xref">ONT/ONU-Assured-Data-Rate-Upstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.8.1"><a href="#section-6.2.8" class="auto internal xref">6.2.8</a>.  <a href="#name-ont-onu-assured-data-rate-u" class="internal xref">ONT/ONU-Assured-Data-Rate-Upstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.9">
-                    <p id="section-toc.1-1.6.2.2.2.9.1"><a href="#section-6.2.9" class="auto internal xref">6.2.9</a>.  <a href="#name-pon-tree-maximum-data-rate-" class="internal xref">PON-Tree-Maximum-Data-Rate-Upstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.9.1"><a href="#section-6.2.9" class="auto internal xref">6.2.9</a>.  <a href="#name-pon-tree-maximum-data-rate-" class="internal xref">PON-Tree-Maximum-Data-Rate-Upstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.10">
-                    <p id="section-toc.1-1.6.2.2.2.10.1"><a href="#section-6.2.10" class="auto internal xref">6.2.10</a>. <a href="#name-pon-tree-maximum-data-rate-d" class="internal xref">PON-Tree-Maximum-Data-Rate-Downstream TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.10.1"><a href="#section-6.2.10" class="auto internal xref">6.2.10</a>. <a href="#name-pon-tree-maximum-data-rate-d" class="internal xref">PON-Tree-Maximum-Data-Rate-Downstream TLV</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2.2.11">
-                    <p id="section-toc.1-1.6.2.2.2.11.1"><a href="#section-6.2.11" class="auto internal xref">6.2.11</a>. <a href="#name-reserved-tlv" class="internal xref">Reserved TLV"&gt;</a></p>
+                    <p id="section-toc.1-1.6.2.2.2.11.1"><a href="#section-6.2.11" class="auto internal xref">6.2.11</a>. <a href="#name-reserved-tlv" class="internal xref">Reserved TLV</a></p>
 </li>
                 </ul>
 </li>
@@ -1278,11 +1278,11 @@ flows and specifying new TLV types.<a href="#section-abstract-2" class="pilcrow"
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1"><span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span> introduces application of ANCP to PON. However, <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>
-has not been been updated to support PON. In addition, DSL technology has continued 
-to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded 
+has not been updated to support PON. In addition, DSL technology has continued
+to evolve. G.fast, VDSL2 Vectoring and  VDSL2 Annex Q were introduced as upgraded
 versions to provide higher bandwidths for the last mile.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document considers all existing access technologies used in a
-teleco access network, yet not supported by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and specifies 
+telco access network, yet not supported by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and specifies
 new TLVs accordingly.<a href="#section-1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1359,7 +1359,7 @@ but also updates some definitions where appropriate.<a href="#section-2-2" class
   new copper, with xDSL physical layer (typically VDSL2). In this case, the
   ONU effectively is a "PON-fed DSLAM". In new FTTdp based deployments the
   access node is named DPU (Distribution Point Unit). Basically from ANCP
-  perspective this node provides the same functionality. Besides VDSL2, 
+  perspective this node provides the same functionality. Besides VDSL2,
   G.fast is mature and widely deployed.<a href="#section-2-3.8.1.1.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -1373,10 +1373,10 @@ but also updates some definitions where appropriate.<a href="#section-2-2" class
       <h2 id="name-modification-to-ancp-genera">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-modification-to-ancp-genera" class="section-name selfRef">Modification to ANCP - General Aspects</a>
       </h2>
-<p id="section-3-1">ANCP message formats remain the same as described in 
-<span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> when it is applied to PON. 
-However, some message descriptions need to be modified to 
-make them applicable to access networks other than 
+<p id="section-3-1">ANCP message formats remain the same as described in
+<span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.5.1" class="relref">Section 3.5.1</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> when it is applied to PON.
+However, some message descriptions need to be modified to
+make them applicable to access networks other than
 DSL deployments.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">The ANCP Adjacency message is extended to other Access Technologies
 than DSL. Generalize the message format to following:<a href="#section-3-2" class="pilcrow">¶</a></p>
@@ -1395,7 +1395,7 @@ than DSL. Generalize the message format to following:<a href="#section-3-2" clas
               <p id="section-3-4.1.2.3.1">Capability Data: NULL<a href="#section-3-4.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3-4.1.2.4">
-              <p id="section-3-4.1.2.4.1">For the detailed protocol specification of this capability, 
+              <p id="section-3-4.1.2.4.1">For the detailed protocol specification of this capability,
 see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6" class="relref">Section 6</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.1.2.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -1413,7 +1413,7 @@ see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6" class="relref">
               <p id="section-3-4.2.2.3.1">Capability Data: NULL<a href="#section-3-4.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3-4.2.2.4">
-              <p id="section-3-4.2.2.4.1">For the detailed protocol specification of this capability, 
+              <p id="section-3-4.2.2.4.1">For the detailed protocol specification of this capability,
 see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-7" class="relref">Section 7</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.2.2.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -1431,7 +1431,7 @@ see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-7" class="relref">
               <p id="section-3-4.3.2.3.1">Capability Data: NULL<a href="#section-3-4.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-3-4.3.2.4">
-              <p id="section-3-4.3.2.4.1">For the detailed protocol specification of this capability, 
+              <p id="section-3-4.3.2.4.1">For the detailed protocol specification of this capability,
 see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-8" class="relref">Section 8</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-3-4.3.2.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -1473,8 +1473,8 @@ see <span><a href="https://rfc-editor.org/rfc/rfc6320#section-8" class="relref">
       <h2 id="name-extension-to-dsl-sub-tlv">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-extension-to-dsl-sub-tlv" class="section-name selfRef">Extension to DSL Sub TLV</a>
       </h2>
-<p id="section-5-1">DSL sub TLVs are listed in <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6.5" class="relref">Section 6.5</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>. 
-G.Fast requires beside existing TLVs the following new TLVs.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">DSL sub TLVs are listed in <span><a href="https://rfc-editor.org/rfc/rfc6320#section-6.5" class="relref">Section 6.5</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.
+G.fast requires beside existing TLVs the following new TLVs.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <div id="expected-throughput-etr-tlv">
 <section id="section-5.1">
         <h3 id="name-expected-throughput-etr-tlv">
@@ -1491,7 +1491,7 @@ G.Fast requires beside existing TLVs the following new TLVs.<a href="#section-5-
                 <p id="section-5.1-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.1-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.1-1.1.2.3">
-                <p id="section-5.1-1.1.2.3.1">Description: Reports the expected throughput upstream after 
+                <p id="section-5.1-1.1.2.3.1">Description: Reports the expected throughput upstream after
 retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1506,7 +1506,7 @@ retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.1.2.3.1"
                 <p id="section-5.1-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.1-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.1-1.2.2.3">
-                <p id="section-5.1-1.2.2.3.1">Description: Reports the expected throughput downstream after 
+                <p id="section-5.1-1.2.2.3.1">Description: Reports the expected throughput downstream after
 retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1530,7 +1530,7 @@ retransmission (ITU-T G.997.2, clause 7.11.1.2).<a href="#section-5.1-1.2.2.3.1"
                 <p id="section-5.2-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.2-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.2-1.1.2.3">
-                <p id="section-5.2-1.1.2.3.1">Description: Reports the attainable expected throughput upstream 
+                <p id="section-5.2-1.1.2.3.1">Description: Reports the attainable expected throughput upstream
 at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1545,7 +1545,7 @@ at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.1.2.3.1" class="p
                 <p id="section-5.2-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.2-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.2-1.2.2.3">
-                <p id="section-5.2-1.2.2.3.1">Description: Reports the attainable expected throughput downstream 
+                <p id="section-5.2-1.2.2.3.1">Description: Reports the attainable expected throughput downstream
 at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1612,7 +1612,7 @@ at L2 (ITU-T G.997.2, clause 7.11.2.2).<a href="#section-5.2-1.2.2.3.1" class="p
                 <p id="section-5.4-1.1.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.4-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.4-1.1.2.3">
-                <p id="section-5.4-1.1.2.3.1">Description: Reports the attainable Gamma data rate 
+                <p id="section-5.4-1.1.2.3.1">Description: Reports the attainable Gamma data rate
 upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1627,7 +1627,7 @@ upstream (ATTGDR) (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.1.2.3
                 <p id="section-5.4-1.2.2.2.1">Value: Rate in kbits/s as a 32-bit unsigned integer.<a href="#section-5.4-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
               <li class="normal" id="section-5.4-1.2.2.3">
-                <p id="section-5.4-1.2.2.3.1">Description: Reports the attainable Gamma data rate (ATTGDR) 
+                <p id="section-5.4-1.2.2.3.1">Description: Reports the attainable Gamma data rate (ATTGDR)
 downstream (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
@@ -1642,7 +1642,7 @@ downstream (ITU-T G.997.2, clause 7.11.2.3).<a href="#section-5.4-1.2.2.3.1" cla
       <h2 id="name-ancp-based-pon-topology-dis">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-ancp-based-pon-topology-dis" class="section-name selfRef">ANCP-Based PON Topology Discovery</a>
       </h2>
-<p id="section-6-1">This section describes topology discovery messages applied for PON. 
+<p id="section-6-1">This section describes topology discovery messages applied for PON.
 TLVs not addressed here remain the same as applied for DSL.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <div id="ancp-port-up-and-port-down-event-message-descriptions">
 <section id="section-6.1">
@@ -1692,10 +1692,10 @@ DSL-Line-Attributes TLV is updated as Access-Line-Attributes TLV.<a href="#secti
 <p id="section-6.1-4">See <span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.6.1" class="relref">Section 3.6.1</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> for a description of the ANCP general
 message header. The Message Type field <span class="bcp14">MUST</span> be set to 80 for Port Up,
 81 for Port Down. It is applicable to both DSL and PON based access
-systems. The 4-bit Result field <span class="bcp14">MUST</span> be set to zero (signifying Ignore). 
-The 12-bit Result Code field and the 24-bit Transaction Identifier field 
-<span class="bcp14">MUST</span> also be set to zeroes. Other fields in the general header <span class="bcp14">MUST</span> be 
-set a as described in <span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.6" class="relref">Section 3.6</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
+systems. The 4-bit Result field <span class="bcp14">MUST</span> be set to zero (signifying Ignore).
+The 12-bit Result Code field and the 24-bit Transaction Identifier field
+<span class="bcp14">MUST</span> also be set to zeroes. Other fields in the general header <span class="bcp14">MUST</span> be
+set as described in <span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.6" class="relref">Section 3.6</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
 <p id="section-6.1-5">The five-word Unused field is a historical leftover. The handling
 of unused/reserved fields is described in <span><a href="https://rfc-editor.org/rfc/rfc6320#section-3.4" class="relref">Section 3.4</a> of [<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>.<a href="#section-6.1-5" class="pilcrow">¶</a></p>
 <p id="section-6.1-6">The remaining message fields belong to the "extension block", and
@@ -1720,10 +1720,10 @@ more TLVs to define its characteristics.<a href="#section-6.1-13" class="pilcrow
         <h3 id="name-pon-access-line-identificat">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-pon-access-line-identificat" class="section-name selfRef">PON Access Line Identification</a>
         </h3>
-<p id="section-6.2-1">Most ANCP messages involve actions relating to a specific access line. 
-Thus, it is necessary to describe how PON access lines are identified 
-within those messages. This section defines four TLVs for that purpose 
-and provides an informative description of how they are used in PON. 
+<p id="section-6.2-1">Most ANCP messages involve actions relating to a specific access line.
+Thus, it is necessary to describe how PON access lines are identified
+within those messages. This section defines four TLVs for that purpose
+and provides an informative description of how they are used in PON.
 TLVs not addressed here remain unchanged as applied for DSL.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
 <div id="access-loop-circuit-id-tlv">
 <section id="section-6.2.1">
@@ -1760,7 +1760,7 @@ Access Node, as described in Section 5.7 of <span>[<a href="#TR156" class="cite 
 </li>
             <li class="normal" id="section-6.2.2-1.2">
               <p id="section-6.2.2-1.2.1">Description: An operator-configured string that uniquely
-identifies the user on the associated access line, as 
+identifies the user on the associated access line, as
 described in Section 5.7 of <span>[<a href="#TR156" class="cite xref">TR156</a>]</span>.<a href="#section-6.2.2-1.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.2-1.3">
@@ -1793,7 +1793,7 @@ access line serving a subscriber.<a href="#section-6.2.3-1.2.1" class="pilcrow">
 line attributes. The PON-Access-Line-Attributes TLV <span class="bcp14">MUST</span> contain at
 least one TLV when it is present in a Port Up or Port Down message.
 The actual contents are determined by the AN control
-application. Technology-independent attributes of <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>, 
+application. Technology-independent attributes of <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span>,
 such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2.3-1.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
@@ -1846,11 +1846,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="ontonu-average-data-rate-downstream-tlv">
 <section id="section-6.2.5">
           <h4 id="name-ont-onu-average-data-rate-d">
-<a href="#section-6.2.5" class="section-number selfRef">6.2.5. </a><a href="#name-ont-onu-average-data-rate-d" class="section-name selfRef">ONT/ONU-Average-Data-Rate-Downstream TLV"&gt;</a>
+<a href="#section-6.2.5" class="section-number selfRef">6.2.5. </a><a href="#name-ont-onu-average-data-rate-d" class="section-name selfRef">ONT/ONU-Average-Data-Rate-Downstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.5-1.1">
-              <p id="section-6.2.5-1.1.1">Type: 0x00b0<a href="#section-6.2.5-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.5-1.1.1">Type: 0x00B0<a href="#section-6.2.5-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.5-1.2">
               <p id="section-6.2.5-1.2.1">Description: ONT/ONU downstream average data rate L2<a href="#section-6.2.5-1.2.1" class="pilcrow">¶</a></p>
@@ -1867,11 +1867,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="ontonu-peak-data-rate-downstream-tlv">
 <section id="section-6.2.6">
           <h4 id="name-ont-onu-peak-data-rate-down">
-<a href="#section-6.2.6" class="section-number selfRef">6.2.6. </a><a href="#name-ont-onu-peak-data-rate-down" class="section-name selfRef">ONT/ONU-Peak-Data-Rate-Downstream TLV"&gt;</a>
+<a href="#section-6.2.6" class="section-number selfRef">6.2.6. </a><a href="#name-ont-onu-peak-data-rate-down" class="section-name selfRef">ONT/ONU-Peak-Data-Rate-Downstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.6-1.1">
-              <p id="section-6.2.6-1.1.1">Type: 0x00b1<a href="#section-6.2.6-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.6-1.1.1">Type: 0x00B1<a href="#section-6.2.6-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.6-1.2">
               <p id="section-6.2.6-1.2.1">Description: ONT/ONU downstream peak data rate L2<a href="#section-6.2.6-1.2.1" class="pilcrow">¶</a></p>
@@ -1888,11 +1888,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="ontonu-maximum-data-rate-upstream-tlv">
 <section id="section-6.2.7">
           <h4 id="name-ont-onu-maximum-data-rate-u">
-<a href="#section-6.2.7" class="section-number selfRef">6.2.7. </a><a href="#name-ont-onu-maximum-data-rate-u" class="section-name selfRef">ONT/ONU-Maximum-Data-Rate-Upstream TLV"&gt;</a>
+<a href="#section-6.2.7" class="section-number selfRef">6.2.7. </a><a href="#name-ont-onu-maximum-data-rate-u" class="section-name selfRef">ONT/ONU-Maximum-Data-Rate-Upstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.7-1.1">
-              <p id="section-6.2.7-1.1.1">Type: 0x00b2<a href="#section-6.2.7-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.7-1.1.1">Type: 0x00B2<a href="#section-6.2.7-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.7-1.2">
               <p id="section-6.2.7-1.2.1">Description: ONT/ONU upstream maximum data rate L2<a href="#section-6.2.7-1.2.1" class="pilcrow">¶</a></p>
@@ -1909,11 +1909,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="ontonu-assured-data-rate-upstream-tlv">
 <section id="section-6.2.8">
           <h4 id="name-ont-onu-assured-data-rate-u">
-<a href="#section-6.2.8" class="section-number selfRef">6.2.8. </a><a href="#name-ont-onu-assured-data-rate-u" class="section-name selfRef">ONT/ONU-Assured-Data-Rate-Upstream TLV"&gt;</a>
+<a href="#section-6.2.8" class="section-number selfRef">6.2.8. </a><a href="#name-ont-onu-assured-data-rate-u" class="section-name selfRef">ONT/ONU-Assured-Data-Rate-Upstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.8-1.1">
-              <p id="section-6.2.8-1.1.1">Type: 0x00b3<a href="#section-6.2.8-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.8-1.1.1">Type: 0x00B3<a href="#section-6.2.8-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.8-1.2">
               <p id="section-6.2.8-1.2.1">Description: ONT/ONU upstream assured data rate L2<a href="#section-6.2.8-1.2.1" class="pilcrow">¶</a></p>
@@ -1930,11 +1930,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="pon-tree-maximum-data-rate-upstream-tlv">
 <section id="section-6.2.9">
           <h4 id="name-pon-tree-maximum-data-rate-">
-<a href="#section-6.2.9" class="section-number selfRef">6.2.9. </a><a href="#name-pon-tree-maximum-data-rate-" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Upstream TLV"&gt;</a>
+<a href="#section-6.2.9" class="section-number selfRef">6.2.9. </a><a href="#name-pon-tree-maximum-data-rate-" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Upstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.9-1.1">
-              <p id="section-6.2.9-1.1.1">Type: 0x00b4<a href="#section-6.2.9-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.9-1.1.1">Type: 0x00B4<a href="#section-6.2.9-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.9-1.2">
               <p id="section-6.2.9-1.2.1">Description: PON Tree upstream maximum data rate L2<a href="#section-6.2.9-1.2.1" class="pilcrow">¶</a></p>
@@ -1951,11 +1951,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="pon-tree-maximum-data-rate-downstream-tlv">
 <section id="section-6.2.10">
           <h4 id="name-pon-tree-maximum-data-rate-d">
-<a href="#section-6.2.10" class="section-number selfRef">6.2.10. </a><a href="#name-pon-tree-maximum-data-rate-d" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Downstream TLV"&gt;</a>
+<a href="#section-6.2.10" class="section-number selfRef">6.2.10. </a><a href="#name-pon-tree-maximum-data-rate-d" class="section-name selfRef">PON-Tree-Maximum-Data-Rate-Downstream TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.10-1.1">
-              <p id="section-6.2.10-1.1.1">Type: 0x00b5<a href="#section-6.2.10-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.10-1.1.1">Type: 0x00B5<a href="#section-6.2.10-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.10-1.2">
               <p id="section-6.2.10-1.2.1">Description: PON Tree downstream maximum data rate L2<a href="#section-6.2.10-1.2.1" class="pilcrow">¶</a></p>
@@ -1972,11 +1972,11 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
 <div id="reserved-tlv">
 <section id="section-6.2.11">
           <h4 id="name-reserved-tlv">
-<a href="#section-6.2.11" class="section-number selfRef">6.2.11. </a><a href="#name-reserved-tlv" class="section-name selfRef">Reserved TLV"&gt;</a>
+<a href="#section-6.2.11" class="section-number selfRef">6.2.11. </a><a href="#name-reserved-tlv" class="section-name selfRef">Reserved TLV</a>
           </h4>
 <ul class="normal">
 <li class="normal" id="section-6.2.11-1.1">
-              <p id="section-6.2.11-1.1.1">Type: 0x00b6 - 0x00b7<a href="#section-6.2.11-1.1.1" class="pilcrow">¶</a></p>
+              <p id="section-6.2.11-1.1.1">Type: 0x00B6 - 0x00B7<a href="#section-6.2.11-1.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-6.2.11-1.2">
               <p id="section-6.2.11-1.2.1">Description: Reserved<a href="#section-6.2.11-1.2.1" class="pilcrow">¶</a></p>
@@ -1999,7 +1999,7 @@ such as TLV0x0090, are valid for PON and not repeated here.<a href="#section-6.2
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-7-1">This document does not introduce additional security considerations 
+<p id="section-7-1">This document does not introduce additional security considerations
 beyond those discussed in <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and <span>[<a href="#RFC6934" class="cite xref">RFC6934</a>]</span>.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2014,7 +2014,7 @@ beyond those discussed in <span>[<a href="#RFC6320" class="cite xref">RFC6320</a
 <a href="#section-8.1" class="section-number selfRef">8.1. </a><a href="#name-ancp-tlv-type-registry" class="section-name selfRef">ANCP TLV Type Registry</a>
         </h3>
 <p id="section-8.1-1">This document defines following sets of TLVs for PON, some of them
-have defined by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and are referenced here for completeness:<a href="#section-8.1-1" class="pilcrow">¶</a></p>
+have been defined by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> and are referenced here for completeness:<a href="#section-8.1-1" class="pilcrow">¶</a></p>
 <table class="center" id="table-1">
           <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
 <thead>
@@ -2240,8 +2240,8 @@ have defined by <span>[<a href="#RFC6320" class="cite xref">RFC6320</a>]</span> 
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and 
-Sven Leimer for joint work reviewing the document and providing valuable 
+<p id="appendix-A-1">Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and
+Sven Leimer for joint work reviewing the document and providing valuable
 comments to this document.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2276,10 +2276,10 @@ comments to this document.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </address>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Hongyu Li</span></div>
-<div dir="auto" class="left"><span class="org">Huawei</span></div>
+<div dir="auto" class="left"><span class="org">Huawei Technologies</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:honyu.li@huawei.com" class="email">honyu.li@huawei.com</a>
+<a href="mailto:lihy@huawei.com" class="email">lihy@huawei.com</a>
 </div>
 </address>
 </section>
