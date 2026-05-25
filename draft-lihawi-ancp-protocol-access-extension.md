@@ -22,9 +22,6 @@ author:
 -  fullname: "Birgit Witschurke"
    organization: "Deutsche Telekom AG"
    email: "b.witschurke@telekom.de"
--  fullname: "Hongyu Li"
-   organization: "Huawei Technologies"
-   email: "lihy@huawei.com"
 
 informative:
    TR156:
@@ -37,12 +34,12 @@ informative:
 
 --- abstract
 
-The purpose of this document is to specify extensions to the ANCP
-(Access Node Control Protocol) (RFC6320) to support PON as described
-in RFC6934 and newer DSL Technologies including G.fast.
-
-This document updates RFC6320 by modifications to terminologies,
-flows and specifying new TLV types.
+This document specifies extensions to the Access Node Control Protocol (ANCP), 
+defined in RFC6320, to introduce support for Passive Optical Networks (PON) 
+as described in RFC6934, alongside evolving DSL technologies such as G.fast. 
+Furthermore, this document updates RFC6320 by modifying existing terminologies 
+and message flows, and by defining new Type-Length-Value (TLV) types to accommodate 
+these varied access technologies.
 
 --- middle
 
@@ -347,6 +344,8 @@ TLVs not addressed here remain unchanged as applied for DSL.
   - XGS-PON = 4
   - WDM-PON = 5
   - Unknown = 7
+  - 25GS-PON = 8
+  - 50G-PON = 9
 
 ### ONT/ONU-Average-Data-Rate-Downstream TLV
 
@@ -404,10 +403,21 @@ beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 
 # IANA Considerations
 
+## Early IANA Allocation Request
+
+**Note to the RFC Editor and IANA:** 
+Multiple vendors have already implemented the ANCP extensions described in this document, 
+and the exact TLV Type values specified below are actively deployed in production networks. 
+To prevent severe breakage of backwards compatibility within this existing deployed base, 
+the authors formally request the early allocation of these specific TLV Type values 
+according to the procedures defined in {{!RFC7120}}.
+
 ## ANCP TLV Type Registry
 
-This document defines following sets of TLVs for PON, some of them
-have been defined by {{!RFC6320}} and are referenced here for completeness:
+This document defines the following sets of new TLVs for PON and evolving DSL access technologies. 
+Some values previously defined by {{!RFC6320}} are referenced here for completeness. 
+
+IANA is requested to allocate the specific code points listed below in the "ANCP TLV Type" registry.
 
 | Type Code | TLV Name                                               | Reference |
 | --------- | ------------------------------------------------------ | --------- |
@@ -418,36 +428,88 @@ have been defined by {{!RFC6320}} and are referenced here for completeness:
 | 0x0005    | Service-Profile-Name                                   | RFC 6320  |
 | 0x0006    | Access-Aggregation-Circuit-ID-Binary                   | RFC 6320  |
 | 0x0011    | Command                                                | RFC 6320  |
-| 0x0012    | PON-Access-Line-Attributes                             | RFC xxxx  |
-| 0x0097    | PON-Access-Type                                        | RFC xxxx  |
-| 0x0098    | Reserved                                               | RFC xxxx  |
-| 0x0099    | Reserved                                               | RFC xxxx  |
-| 0x009A    | Reserved                                               | RFC xxxx  |
-| 0x009B    | Expected Throughput (ETR) upstream                     | RFC xxxx  |
-| 0x009C    | Expected Throughput (ETR) downstream                   | RFC xxxx  |
-| 0x009D    | Attainable Expected Throughput (ATTETR) upstream       | RFC xxxx  |
-| 0x009E    | Attainable Expected Throughput (ATTETR) downstream     | RFC xxxx  |
-| 0x009F    | Gamma Data Rate (GDR) upstream                         | RFC xxxx  |
-| 0x00A0    | Gamma Data Rate (GDR) downstream                       | RFC xxxx  |
-| 0x00A1    | Attainable Gamma Data Rate (ATTGDR) upstream           | RFC xxxx  |
-| 0x00A2    | Attainable Gamma Data Rate (ATTGDR) downstream         | RFC xxxx  |
-| 0x00B0    | ONT/ONU-Average-Data-Rate-Downstream                   | RFC xxxx  |
-| 0x00B1    | ONT/ONU-Peak-Data-Rate-Downstream                      | RFC xxxx  |
-| 0x00B2    | ONT/ONU-Maximum-Data-Rate-Upstream                     | RFC xxxx  |
-| 0x00B3    | ONT/ONU-Assured-Data-Rate-Upstream                     | RFC xxxx  |
-| 0x00B4    | PON-Tree-Maximum-Data-Rate-Upstream                    | RFC xxxx  |
-| 0x00B5    | PON-Tree-Maximum-Data-Rate-Downstream                  | RFC xxxx  |
-| 0x00B6    | Reserved                                               | RFC xxxx  |
-| 0x00B7    | Reserved                                               | RFC xxxx  |
+| 0x0012    | PON-Access-Line-Attributes                             | RFC TBD1  |
+| 0x0097    | PON-Access-Type                                        | RFC TBD1  |
+| 0x0098    | Reserved                                               | RFC TBD1  |
+| 0x0099    | Reserved                                               | RFC TBD1  |
+| 0x009A    | Reserved                                               | RFC TBD1  |
+| 0x009B    | Expected Throughput (ETR) upstream                     | RFC TBD1  |
+| 0x009C    | Expected Throughput (ETR) downstream                   | RFC TBD1  |
+| 0x009D    | Attainable Expected Throughput (ATTETR) upstream       | RFC TBD1  |
+| 0x009E    | Attainable Expected Throughput (ATTETR) downstream     | RFC TBD1  |
+| 0x009F    | Gamma Data Rate (GDR) upstream                         | RFC TBD1  |
+| 0x00A0    | Gamma Data Rate (GDR) downstream                       | RFC TBD1  |
+| 0x00A1    | Attainable Gamma Data Rate (ATTGDR) upstream           | RFC TBD1  |
+| 0x00A2    | Attainable Gamma Data Rate (ATTGDR) downstream         | RFC TBD1  |
+| 0x00B0    | ONT/ONU-Average-Data-Rate-Downstream                   | RFC TBD1  |
+| 0x00B1    | ONT/ONU-Peak-Data-Rate-Downstream                      | RFC TBD1  |
+| 0x00B2    | ONT/ONU-Maximum-Data-Rate-Upstream                     | RFC TBD1  |
+| 0x00B3    | ONT/ONU-Assured-Data-Rate-Upstream                     | RFC TBD1  |
+| 0x00B4    | PON-Tree-Maximum-Data-Rate-Upstream                    | RFC TBD1  |
+| 0x00B5    | PON-Tree-Maximum-Data-Rate-Downstream                  | RFC TBD1  |
+| 0x00B6    | Reserved                                               | RFC TBD1  |
+| 0x00B7    | Reserved                                               | RFC TBD1  |
 | 0x0106    | Status-Info                                            | RFC 6320  |
 | 0x1000    | Target (single access line variant)                    | RFC 6320  |
 | 0x1001 -  | Reserved for Target variants                           | RFC 6320  |
 
+*Note to RFC Editor: Please replace "TBD1" with the assigned RFC number prior to publication.*
+
+## Creation of the ANCP DSL-Type Registry
+
+This document requests that IANA create a new registry titled "ANCP DSL-Type" within the 
+Access Node Control Protocol (ANCP). 
+
+The registration procedure for this registry is "IETF Review" as defined in RFC 8126. 
+
+The registry consists of 32-bit unsigned integers. IANA is requested to populate this new registry with the initial values defined in RFC 6320, as well as the new values defined in this document (which are subject to the early allocation request noted above). 
+
+| Value | Description            | Reference     |
+| ----- | ---------------------- | ------------- |
+| 1     | ADSL1                  | RFC 6320      |
+| 2     | ADSL2                  | RFC 6320      |
+| 3     | ADSL2+                 | RFC 6320      |
+| 4     | VDSL1                  | RFC 6320      |
+| 5     | VDSL2                  | RFC 6320      |
+| 6     | SDSL                   | RFC 6320      |
+| 7     | Unknown                | RFC 6320      |
+| 8     | G.fast                 | TBD1          |
+| 9     | VDSL2 Annex Q          | TBD1          |
+| 10    | SDSL bonded            | TBD1          |
+| 11    | VDSL2 bonded           | TBD1          |
+| 12    | G.fast bonded          | TBD1          |
+| 13    | VDSL2 Annex Q bonded   | TBD1          |
+
+## Creation of the ANCP PON-Access-Type Registry
+
+This document requests that IANA create a new registry titled "ANCP PON-Access-Type" 
+within the Access Node Control Protocol (ANCP) parameters. 
+
+The registration procedure for this registry is "IETF Review" as defined in RFC 8126. 
+
+The registry consists of 32-bit unsigned integers representing the type of PON transmission system in use. IANA is requested to populate this new registry with the initial values defined in this document (which are subject to the early allocation request noted above).
+
+| Value | Description            | Reference     |
+| ----- | ---------------------- | ------------- |
+| 0     | OTHER                  | TBD1          |
+| 1     | GPON                   | TBD1          |
+| 2     | XG-PON1                | TBD1          |
+| 3     | TWDM-PON               | TBD1          |
+| 4     | XGS-PON                | TBD1          |
+| 5     | WDM-PON                | TBD1          |
+| 7     | Unknown                | TBD1          |
+| 8     | 25GS-PON               | TBD1          |
+| 9     | 50G-PON                | TBD1          |
 
 --- back
 
 # Acknowledgments
 {:numbered="false"}
+
+The authors would like to give special recognition to Hongyu Li, who served as a primary
+author on earlier versions of this draft. His foundational efforts and significant technical 
+contributions during his time at Huawei Technologies were instrumental in shaping this 
+document.
 
 Many thanks to Norbert Voigt, John Gibbons, Sven Ooghe, Koen De Sagher and
 Sven Leimer for joint work reviewing the document and providing valuable
