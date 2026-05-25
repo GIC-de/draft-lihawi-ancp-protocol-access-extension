@@ -405,7 +405,7 @@ beyond those discussed in {{!RFC6320}} and {{!RFC6934}}.
 
 ## Early IANA Allocation Request
 
-**Note to the RFC Editor and IANA:**
+Note to the RFC Editor and IANA:
 Multiple vendors have already implemented the ANCP extensions described in this document,
 and the exact TLV Type values specified below are actively deployed in production networks.
 To prevent severe breakage of backwards compatibility within this existing deployed base,
@@ -453,7 +453,7 @@ IANA is requested to allocate the specific code points listed below in the "ANCP
 | 0x1000    | Target (single access line variant)                    | RFC 6320  |
 | 0x1001 -  | Reserved for Target variants                           | RFC 6320  |
 
-*Note to RFC Editor: Please replace "TBD1" with the assigned RFC number prior to publication.*
+Note to the RFC Editor: Please replace "TBD1" with the assigned RFC number prior to publication.
 
 ## Creation of the ANCP DSL-Type Registry
 
