@@ -337,6 +337,7 @@ TLVs not addressed here remain unchanged as applied for DSL.
   - TWDM-PON = 3
   - XGS-PON = 4
   - WDM-PON = 5
+  - Reserved = 6
   - Unknown = 7
   - 25GS-PON = 8
   - 50G-PON = 9
@@ -385,7 +386,7 @@ TLVs not addressed here remain unchanged as applied for DSL.
 
 ### Reserved TLV
 
-- Type: 0x00B6 - 0x00B7
+- Type: 0x0098 - 0x009A, 0x00B6 - 0x00B7
 - Description: Reserved
 - Length: tbd
 - Value: tbd
@@ -462,6 +463,7 @@ in this document (which are subject to the early allocation request noted above)
 
 | Value | Description            | Reference     |
 | ----- | ---------------------- | ------------- |
+| 0     | Other                  | RFC 6320      |
 | 1     | ADSL1                  | RFC 6320      |
 | 2     | ADSL2                  | RFC 6320      |
 | 3     | ADSL2+                 | RFC 6320      |
@@ -493,6 +495,7 @@ The registry consists of 32-bit unsigned integers representing the type of PON t
 | 3     | TWDM-PON               | TBD1          |
 | 4     | XGS-PON                | TBD1          |
 | 5     | WDM-PON                | TBD1          |
+| 6     | Reserved               | TBD1          |
 | 7     | Unknown                | TBD1          |
 | 8     | 25GS-PON               | TBD1          |
 | 9     | 50G-PON                | TBD1          |
