@@ -474,6 +474,8 @@ Table of Contents
 
       -  WDM-PON = 5
 
+      -  Reserved = 6
+
       -  Unknown = 7
 
       -  25GS-PON = 8
@@ -542,7 +544,7 @@ Table of Contents
 
 6.2.11.  Reserved TLV
 
-   *  Type: 0x00B6 - 0x00B7
+   *  Type: 0x0098 - 0x009A, 0x00B6 - 0x00B7
 
    *  Description: Reserved
 
@@ -667,6 +669,8 @@ Table of Contents
                +=======+======================+===========+
                | Value | Description          | Reference |
                +=======+======================+===========+
+               | 0     | Other                | RFC 6320  |
+               +-------+----------------------+-----------+
                | 1     | ADSL1                | RFC 6320  |
                +-------+----------------------+-----------+
                | 2     | ADSL2                | RFC 6320  |
@@ -725,6 +729,8 @@ Table of Contents
                     | 4     | XGS-PON     | TBD1      |
                     +-------+-------------+-----------+
                     | 5     | WDM-PON     | TBD1      |
+                    +-------+-------------+-----------+
+                    | 6     | Reserved    | TBD1      |
                     +-------+-------------+-----------+
                     | 7     | Unknown     | TBD1      |
                     +-------+-------------+-----------+
